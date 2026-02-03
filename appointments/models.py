@@ -23,6 +23,8 @@ TIME_CHOICES = (
 
 
 class Appointment(models.Model):
+    """ ...
+    """
     user = models.ForeignKey(
         User, on_delete=models.CASCADE, null=True, blank=True)
     service = models.CharField(

@@ -5,3 +5,12 @@ from django.http import HttpResponse
 
 def my_appointments(request):
     return HttpResponse("Dr in session")
+
+
+# Create your views here.
+
+
+def index(request):
+    """ A view to return the index page """
+
+    return render(request, 'home/index.html')
