@@ -35,4 +35,5 @@ class Appointment(models.Model):
     time_created = models.DateTimeField(default=datetime.now, blank=True)
 
     def __str__(self):
-        return f"{self.user.username} | day: {self.day} | time: {self.time}"
+        username = self.user.username if self.user else 'No user'
+        return f"{username} | day: {self.day} | time: {self.time}"
