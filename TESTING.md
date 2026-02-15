@@ -8,13 +8,44 @@
 
 ### HTML
 
+I have used the recommended [HTML W3C Validator](https://validator.w3.org) to validate all of my HTML files.
+
 ### CSS
+
+I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-validator) to validate all of my CSS files.
 
 ### JavaScript
 
+I have used the recommended [JShint Validator](https://jshint.com) to validate all of my JS files.
+
+
 ### Python
 
+I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com) to validate all of my Python files.
+
+
+| Directory | File | URL | Screenshot | Notes |
+| --- | --- | --- | --- | --- |
+| appointments | [admin.py](https://github.com/Bruce0C/dr.slot/blob/main/appointments/admin.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Bruce0C/dr.slot/main/appointments/admin.py) | ![screenshot](documentation/validation/py-appointments-admin.png) | ⚠️ Notes (if applicable) |
+| appointments | [models.py](https://github.com/Bruce0C/dr.slot/blob/main/appointments/models.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Bruce0C/dr.slot/main/appointments/models.py) | ![screenshot](documentation/validation/py-appointments-models.png) | ⚠️ Notes (if applicable) |
+| appointments | [tests.py](https://github.com/Bruce0C/dr.slot/blob/main/appointments/tests.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Bruce0C/dr.slot/main/appointments/tests.py) | ![screenshot](documentation/validation/py-appointments-tests.png) | ⚠️ Notes (if applicable) |
+| appointments | [urls.py](https://github.com/Bruce0C/dr.slot/blob/main/appointments/urls.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Bruce0C/dr.slot/main/appointments/urls.py) | ![screenshot](documentation/validation/py-appointments-urls.png) | ⚠️ Notes (if applicable) |
+| appointments | [views.py](https://github.com/Bruce0C/dr.slot/blob/main/appointments/views.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Bruce0C/dr.slot/main/appointments/views.py) | ![screenshot](documentation/validation/py-appointments-views.png) | ⚠️ Notes (if applicable) |
+| drslot | [settings.py](https://github.com/Bruce0C/dr.slot/blob/main/drslot/settings.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Bruce0C/dr.slot/main/drslot/settings.py) | ![screenshot](documentation/validation/py-drslot-settings.png) | ⚠️ Notes (if applicable) |
+| drslot | [urls.py](https://github.com/Bruce0C/dr.slot/blob/main/drslot/urls.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Bruce0C/dr.slot/main/drslot/urls.py) | ![screenshot](documentation/validation/py-drslot-urls.png) | ⚠️ Notes (if applicable) |
+| home | [admin.py](https://github.com/Bruce0C/dr.slot/blob/main/home/admin.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Bruce0C/dr.slot/main/home/admin.py) | ![screenshot](documentation/validation/py-home-admin.png) | ⚠️ Notes (if applicable) |
+| home | [models.py](https://github.com/Bruce0C/dr.slot/blob/main/home/models.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Bruce0C/dr.slot/main/home/models.py) | ![screenshot](documentation/validation/py-home-models.png) | ⚠️ Notes (if applicable) |
+| home | [tests.py](https://github.com/Bruce0C/dr.slot/blob/main/home/tests.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Bruce0C/dr.slot/main/home/tests.py) | ![screenshot](documentation/validation/py-home-tests.png) | ⚠️ Notes (if applicable) |
+| home | [urls.py](https://github.com/Bruce0C/dr.slot/blob/main/home/urls.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Bruce0C/dr.slot/main/home/urls.py) | ![screenshot](documentation/validation/py-home-urls.png) | ⚠️ Notes (if applicable) |
+| home | [views.py](https://github.com/Bruce0C/dr.slot/blob/main/home/views.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Bruce0C/dr.slot/main/home/views.py) | ![screenshot](documentation/validation/py-home-views.png) | ⚠️ Notes (if applicable) |
+|  | [manage.py](https://github.com/Bruce0C/dr.slot/blob/main/manage.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Bruce0C/dr.slot/main/manage.py) | ![screenshot](documentation/validation/py--manage.png) | ⚠️ Notes (if applicable) |
+
 ## Responsiveness
+
+I've tested my deployed project to check for responsiveness issues.
+
+| Page | Mobile | Tablet | Desktop | Notes |
+| --- | --- | --- | --- | --- |
 
 ## Browser Compatibility
 
