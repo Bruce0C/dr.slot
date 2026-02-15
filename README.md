@@ -279,3 +279,16 @@ I've decomposed my Epics into User Stories for prioritizing and implementing the
 ## Deployment
 
 The live deployed application can be found deployed on [Heroku](https://drslot-e9b130b994da.herokuapp.com).
+
+### Heroku Deployment
+
+This project uses [Heroku](https://www.heroku.com), a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud.
+
+Deployment steps are as follows, after account setup:
+
+- Select **New** in the top-right corner of your Heroku Dashboard, and select **Create new app** from the dropdown menu.
+- Your app name must be unique, and then choose a region closest to you (EU or USA), then finally, click **Create App**.
+- From the new app **Settings**, click **Reveal Config Vars**, and set your environment variables to match your private `env.py` file.
+
+> [!IMPORTANT]  
+> This is a sample only; you would replace the values with your own if cloning/forking my repository.
