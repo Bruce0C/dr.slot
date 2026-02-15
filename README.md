@@ -158,11 +158,6 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 
 - **Appointment Reviews:** Allow patients to leave reviews and ratings for doctors after their appointments, helping other users make informed decisions.
 - **Search and Filter:** Enable users to search for doctors or services and filter results by availability, location, or specialization.
-- **Multiple Language Support:** Provide multilingual support to cater to a diverse user base.
 - **Appointment History:** Allow patients and doctors to view a detailed history of past appointments.
-- **Payment Integration:** Add online payment options for booking paid services.
-- **Live Chat Support:** Enable real-time chat for users to communicate with support or doctors.
 - **Push Notifications:** Implement push notifications for appointment reminders and updates.
-- **Analytics Dashboard for Admins:** Provide detailed insights into user activity, appointment trends, and service usage.
-- **Telemedicine Integration:** Add video call functionality for virtual consultations.
 - **Waitlist Management:** Allow patients to join a waitlist for earlier appointment slots if they become available.
