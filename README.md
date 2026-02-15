@@ -152,3 +152,4 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 | Register account | Authentication is handled by allauth, allowing users to register accounts. | ![screenshot](documentation/features/register.png) |
 | Login | Authentication is handled by allauth, allowing users to log in to their existing accounts. | ![screenshot](documentation/features/login.png) |
 | Logout | Authentication is handled by allauth, allowing users to log out of their accounts. | ![screenshot](documentation/features/logout.png) |
+| 404 | The 404 error page will indicate when a user has navigated to a page that doesn't exist, replacing the default Heroku 404 page with one that ties into the site's look and feel. | ![screenshot](documentation/features/404.png) |
