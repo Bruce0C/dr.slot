@@ -355,3 +355,16 @@ To obtain my own Postgres Database from Code Institute, I followed these steps:
 - The Database connection string will resemble something like this:
     - `postgres://<db_username>:<db_password>@<db_host_url>/<db_name>`
 - You can use the above URL with Django; simply paste it into your `env.py` file and Heroku Config Vars as `DATABASE_URL`.
+
+### Local Development
+
+This project can be cloned or forked in order to make a local copy on your own system.
+
+For either method, you will need to install any applicable packages found within the [requirements.txt](requirements.txt) file.
+
+- `pip3 install -r requirements.txt`.
+
+You will need to create a new file called `env.py` at the root-level, and include the same environment variables listed above from the Heroku deployment steps.
+
+> [!IMPORTANT]  
+> This is a sample only; you would replace the values with your own if cloning/forking my repository.
