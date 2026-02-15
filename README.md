@@ -176,3 +176,46 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 | [![badge](https://img.shields.io/badge/Heroku-grey?logo=heroku&logoColor=430098)](https://www.heroku.com) | Hosting the deployed back-end site. |
 | [![badge](https://img.shields.io/badge/Django-grey?logo=django&logoColor=092E20)](https://www.djangoproject.com) | Python framework for the site. |
 | [![badge](https://img.shields.io/badge/PostgreSQL-grey?logo=postgresql&logoColor=4169E1)](https://www.postgresql.org) | Relational database management. |
+
+## Database Design
+
+### Data Model
+
+Entity Relationship Diagrams (ERD) help to visualize database architecture before creating models. Understanding the relationships between different tables can save time later in the project.
+
+![screenshot](documentation/erd.png)
+
+I have used `Mermaid` to generate an interactive ERD of my project.
+
+```mermaid
+erDiagram
+    USER {
+        int id
+        string username
+        string email
+        string password
+        string role
+    }
+    USER ||--o{ APPOINTMENT : "books"
+    USER ||--o{ AVAILABILITY : "sets"
+    DOCTOR {
+        int id
+        string specialization
+        string bio
+    }
+    USER ||--o| DOCTOR : "is a"
+    APPOINTMENT {
+        int id
+        datetime date_time
+        string status
+        string service
+    }
+    DOCTOR ||--o{ APPOINTMENT : "has"
+    AVAILABILITY {
+        int id
+        datetime start_time
+        datetime end_time
+        bool is_available
+    }
+    DOCTOR ||--o{ AVAILABILITY : "sets"
+```
