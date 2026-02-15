@@ -142,3 +142,13 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 |As an admin| I want to view all appointments in the system |so that I can monitor the overall schedule.|
 |As a user| I want the website to be mobile-friendly |so that I can access it on my phone or tablet.|
 |As a user| I want the system to load quickly |so that I can access information without delays. |
+
+## Features
+
+### Existing Features
+
+| Feature | Notes | Screenshot |
+| --- | --- | --- |
+| Register account | Authentication is handled by allauth, allowing users to register accounts. | ![screenshot](documentation/features/register.png) |
+| Login | Authentication is handled by allauth, allowing users to log in to their existing accounts. | ![screenshot](documentation/features/login.png) |
+| Logout | Authentication is handled by allauth, allowing users to log out of their accounts. | ![screenshot](documentation/features/logout.png) |
