@@ -275,3 +275,7 @@ I've decomposed my Epics into User Stories for prioritizing and implementing the
 
 > [!NOTE]  
 > For all testing, please refer to the [TESTING.md](TESTING.md) file.
+
+## Deployment
+
+The live deployed application can be found deployed on [Heroku](https://drslot-e9b130b994da.herokuapp.com).
