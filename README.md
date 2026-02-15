@@ -368,3 +368,17 @@ You will need to create a new file called `env.py` at the root-level, and includ
 
 > [!IMPORTANT]  
 > This is a sample only; you would replace the values with your own if cloning/forking my repository.
+
+Sample `env.py` file:
+
+```python
+import os
+
+os.environ.setdefault("SECRET_KEY", "any-random-secret-key")
+os.environ.setdefault("DATABASE_URL", "user-inserts-own-postgres-database-url")
+os.environ.setdefault("CLOUDINARY_URL", "user-inserts-own-cloudinary-url")  # only if using Cloudinary
+
+# local environment only (do not include these in production/deployment!)
+os.environ.setdefault("DEBUG", "True")
+```
+
