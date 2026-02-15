@@ -53,12 +53,46 @@ I've tested my deployed project to check for responsiveness issues.
 
 ## Browser Compatibility
 
+I've tested my deployed project on multiple browsers to check for compatibility issues.
+
+| Page | Chrome | Safari | Notes |
+| --- | --- | --- | --- |
+| Register | ![screenshot](documentation/browsers/chrome-register.png) | ![screenshot](documentation/browsers/firefox-register.png) | ![screenshot](documentation/browsers/safari-register.png) | Works as expected |
+| Login | ![screenshot](documentation/browsers/chrome-login.png) | ![screenshot](documentation/browsers/firefox-login.png) | ![screenshot](documentation/browsers/safari-login.png) | Works as expected |
+| Home | ![screenshot](documentation/browsers/chrome-home.png) | ![screenshot](documentation/browsers/firefox-home.png) | ![screenshot](documentation/browsers/safari-home.png) | Works as expected |
+
 ## Lighthouse Audit
 
+I've tested my deployed project using the Lighthouse Audit tool to check for any major issues. Some warnings are outside of my control, and mobile results tend to be lower than desktop.
+
+| Page | Mobile | Desktop |
+| --- | --- | --- |
+| Register | ![screenshot](documentation/lighthouse/mobile-register.png) | ![screenshot](documentation/lighthouse/desktop-register.png) |
+| Login | ![screenshot](documentation/lighthouse/mobile-login.png) | ![screenshot](documentation/lighthouse/desktop-login.png) |
+| Home | ![screenshot](documentation/lighthouse/mobile-home.png) | ![screenshot](documentation/lighthouse/desktop-home.png) |
+| 404 | ![screenshot](documentation/lighthouse/mobile-404.png) | ![screenshot](documentation/lighthouse/desktop-404.png) |
+
 ## Defensive Programming
+Defensive programming was manually tested with the below user acceptance testing:
+
+| Page | Expectation | Test | Result | Screenshot |
+| --- | --- | --- | --- | --- |
+|Home | | | | [screenshot](documentation/lighthouse/desktop-404.png)|
+|Appointments | | | | [screenshot](documentation/lighthouse/desktop-404.png)|
 
 ## User Story Testing
-
+| Target | Expectation | Outcome | Screenshot |
+| --- | --- | --- | --- |
+|As a patient| I want to create an account |so that I can log in and manage my appointments.|  ![screenshot](documentation/features/feature01.png) |
+|As a patient| I want to log in to my account| so that I can view my upcoming appointments.|  ![screenshot](documentation/features/feature01.png) |
+|As a user| I want to reset my password if I forget it |so that I can regain access to my account.| ![screenshot](documentation/features/feature01.png) |
+|As a patient| I want to book an appointment with a doctor or healthcare provider |so that I can receive medical care.| ![screenshot](documentation/features/feature01.png) |
+|As a patient| I want to reschedule or cancel my appointment |so that I can manage my schedule effectively.| ![screenshot](documentation/features/feature01.png) |
+|As a patient| I want to receive email notifications for my appointment confirmation and reminders |so that I don’t miss my appointments.| ![screenshot](documentation/features/feature01.png) |
+|As an admin| I want to manage user accounts (patients and doctors) |so that I can ensure the system is used appropriately.| ![screenshot](documentation/features/feature01.png) |
+|As an admin| I want to view all appointments in the system |so that I can monitor the overall schedule.| ![screenshot](documentation/features/feature01.png) |
+|As a user| I want the website to be mobile-friendly |so that I can access it on my phone or tablet.| ![screenshot](documentation/features/feature01.png) |
+|As a user| I want the system to load quickly |so that I can access information without delays. | ![screenshot](documentation/features/feature01.png) |
 ## Bugs
 
 ### Fixed Bugs
