@@ -292,3 +292,48 @@ Deployment steps are as follows, after account setup:
 
 > [!IMPORTANT]  
 > This is a sample only; you would replace the values with your own if cloning/forking my repository.
+
+| Key | Value |
+| --- | --- |
+| `CLOUDINARY_URL` | user-inserts-own-cloudinary-url |
+| `DATABASE_URL` | user-inserts-own-postgres-database-url |
+| `DISABLE_COLLECTSTATIC` | 1 (*this is temporary, and can be removed for the final deployment*) |
+| `SECRET_KEY` | any-random-secret-key |
+
+Heroku needs some additional files in order to deploy properly.
+
+- [requirements.txt](requirements.txt)
+- [Procfile](Procfile)
+- [.python-version](.python-version)
+
+You can install this project's **[requirements.txt](requirements.txt)** (*where applicable*) using:
+
+- `pip3 install -r requirements.txt`
+
+If you have your own packages that have been installed, then the requirements file needs updated using:
+
+- `pip3 freeze --local > requirements.txt`
+
+The **[Procfile](Procfile)** can be created with the following command:
+
+- `echo web: gunicorn app_name.wsgi > Procfile`
+- *replace `app_name` with the name of your primary Django app name; the folder where `settings.py` is located*
+
+The **[.python-version](.python-version)** file tells Heroku the specific version of Python to use when running your application.
+
+- `3.12` (or similar)
+
+For Heroku deployment, follow these steps to connect your own GitHub repository to the newly created app:
+
+Either (*recommended*):
+
+- Select **Automatic Deployment** from the Heroku app.
+
+Or:
+
+- In the Terminal/CLI, connect to Heroku using this command: `heroku login -i`
+- Set the remote for Heroku: `heroku git:remote -a app_name` (*replace `app_name` with your app name*)
+- After performing the standard Git `add`, `commit`, and `push` to GitHub, you can now type:
+	- `git push heroku main`
+
+The project should now be connected and deployed to Heroku!
