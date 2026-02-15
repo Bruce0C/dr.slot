@@ -219,3 +219,28 @@ erDiagram
     }
     DOCTOR ||--o{ AVAILABILITY : "sets"
 ```
+source: [Mermaid]()
+
+I have used `pygraphviz` and `django-extensions` to auto-generate an ERD.
+
+The steps taken were as follows:
+- In the terminal: `sudo apt update`
+- then: `sudo apt-get install python3-dev graphviz libgraphviz-dev pkg-config`
+- then type `Y` to proceed
+- then: `pip3 install django-extensions pygraphviz`
+- in my `settings.py` file, I added the following to my `INSTALLED_APPS`:
+```python
+INSTALLED_APPS = [
+    ...
+    'django_extensions',
+    ...
+]
+```
+- back in the terminal: `python3 manage.py graph_models -a -o erd.png`
+- drag the new `erd.png` file into my `documentation/` folder
+- removed `'django_extensions',` from my `INSTALLED_APPS`
+- finally, in the terminal: `pip3 uninstall django-extensions pygraphviz -y`
+
+![screenshot](documentation/advanced-erd.png)
+
+source: [medium.com](https://medium.com/@yathomasi1/1-using-django-extensions-to-visualize-the-database-diagram-in-django-application-c5fa7e710e16)
