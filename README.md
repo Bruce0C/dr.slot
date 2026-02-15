@@ -100,3 +100,18 @@ source: [dr.slot amiresponsive](https://ui.dev/amiresponsive?url=https://drslot-
      - Ensure the platform is mobile-friendly and adapts to different screen sizes.
 
 ### Colour Scheme
+
+I used [coolors.co](https://coolors.co/080708-3772ff-df2935-fdca40-e6e8e6) to generate my color palette.
+
+- `#` primary text.
+- `#` primary highlights.
+- `#` secondary text.
+- `#` secondary highlights.
+
+![screenshot](documentation/coolors.png)
+
+### Typography
+
+- [...](https://fonts.google.com/specimen/Montserrat) was used for the primary headers and titles.
+- [...](https://fonts.google.com/specimen/Lato) was used for all other secondary text.
+- [Font Awesome](https://fontawesome.com) icons were used throughout the site.
