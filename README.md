@@ -425,3 +425,30 @@ By forking the GitHub Repository, you make a copy of the original repository on 
 2. At the top of the Repository, just below the "Settings" button on the menu, locate and click the "Fork" Button.
 3. Once clicked, you should now have a copy of the original repository in your own GitHub account!
 
+### Local VS Deployment
+
+There are no remaining major differences between the local version when compared to the deployed version online.
+
+## Credits
+
+### Content
+| Source | Notes |
+| --- | --- |
+| [Markdown Builder](https://markdown.2bn.dev) | Help generating Markdown files |
+| [Chris Beams](https://chris.beams.io/posts/git-commit) | "How to Write a Git Commit Message" |
+| [Bootstrap](https://getbootstrap.com) | Various components / responsive front-end framework |
+| [Whitenoise](https://whitenoise.readthedocs.io) | Static file service |
+| [Python Tutor](https://pythontutor.com) | Additional Python help |
+| [ChatGPT](https://chatgpt.com) | Help with code logic and explanations |
+
+### Media
+
+| Source | Notes |
+| --- | --- |
+| [favicon.io](https://favicon.io) | Generating the favicon |
+| [Font Awesome](https://fontawesome.com) | Icons used throughout the site |
+| [Pexels](https://images.pexels.com/photos/416160/pexels-photo-416160.jpeg) | Hero image |
+
+### Acknowledgements
+
+- I would like to thank my Code Institute mentor, [Tim Nelson](https://www.github.com/TravelTimN) for the support throughout the development of this project.
