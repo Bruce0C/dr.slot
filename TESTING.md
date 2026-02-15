@@ -93,12 +93,24 @@ Defensive programming was manually tested with the below user acceptance testing
 |As an admin| I want to view all appointments in the system |so that I can monitor the overall schedule.| ![screenshot](documentation/features/feature01.png) |
 |As a user| I want the website to be mobile-friendly |so that I can access it on my phone or tablet.| ![screenshot](documentation/features/feature01.png) |
 |As a user| I want the system to load quickly |so that I can access information without delays. | ![screenshot](documentation/features/feature01.png) |
-## Bugs
 
+## Bugs
 ### Fixed Bugs
 
-### Unfixed Bugs
+[![GitHub issue custom search](https://img.shields.io/github/issues-search/Bruce0C/dr.slot?query=is%3Aissue%20is%3Aclosed%20label%3Abug&label=Fixed%20Bugs&color=green)](https://www.github.com/Bruce0C/dr.slot/issues?q=is%3Aissue+is%3Aclosed+label%3Abug)
 
+I've used [GitHub Issues](https://www.github.com/Bruce0C/dr.slot/issues) to track and manage bugs and issues during the development stages of my project.
+
+All previously closed/fixed bugs can be tracked [here](https://www.github.com/Bruce0C/dr.slot/issues?q=is%3Aissue+is%3Aclosed+label%3Abug).
+
+![screenshot](documentation/bugs/gh-issues-closed.png)
+
+### Unfixed Bugs
+[![GitHub issue custom search](https://img.shields.io/github/issues-search/Bruce0C/dr.slot?query=is%3Aissue%2Bis%3Aopen%2Blabel%3Abug&label=Unfixed%20Bugs&color=red)](https://www.github.com/Bruce0C/dr.slot/issues?q=is%3Aissue+is%3Aopen+label%3Abug)
+
+Any remaining open issues can be tracked [here](https://www.github.com/Bruce0C/dr.slot/issues?q=is%3Aissue+is%3Aopen+label%3Abug).
+
+![screenshot](documentation/bugs/gh-issues-open.png)
 ### Known Issues
 
 
