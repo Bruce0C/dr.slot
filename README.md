@@ -128,3 +128,17 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 | Home | ![screenshot](documentation/wireframes/mobile-home.png) | ![screenshot](documentation/wireframes/tablet-home.png) | ![screenshot](documentation/wireframes/desktop-home.png) | 
 | Appointments | ![screenshot](documentation/wireframes/mobile-home.png) | ![screenshot](documentation/wireframes/tablet-home.png) | ![screenshot](documentation/wireframes/desktop-home.png) |
 
+## User Stories
+
+| Target | Expectation | Outcome |
+| --- | --- | --- |
+|As a patient| I want to create an account |so that I can log in and manage my appointments.|
+|As a patient| I want to log in to my account| so that I can view my upcoming appointments.|
+|As a user| I want to reset my password if I forget it |so that I can regain access to my account.|
+|As a patient| I want to book an appointment with a doctor or healthcare provider |so that I can receive medical care.|
+|As a patient| I want to reschedule or cancel my appointment |so that I can manage my schedule effectively.|
+|As a patient| I want to receive email notifications for my appointment confirmation and reminders |so that I don’t miss my appointments.|
+|As an admin| I want to manage user accounts (patients and doctors) |so that I can ensure the system is used appropriately.|
+|As an admin| I want to view all appointments in the system |so that I can monitor the overall schedule.|
+|As a user| I want the website to be mobile-friendly |so that I can access it on my phone or tablet.|
+|As a user| I want the system to load quickly |so that I can access information without delays. |
