@@ -59,3 +59,21 @@ class Appointment(models.Model):
     def __str__(self):
         username = self.user.username if self.user else 'No user'
         return f"{username} | {self.service.name} | {self.day} at {self.time}"
+
+
+class Availability(models.Model):
+    """
+    Model to represent a doctor's availability.
+    """
+    doctor = models.ForeignKey(
+        User, on_delete=models.CASCADE, limit_choices_to={'is_staff': True})
+    day = models.DateField()
+    start_time = models.TimeField()
+    end_time = models.TimeField()
+    is_available = models.BooleanField(default=True)
+
+    def __str__(self):
+        return (
+            f"{self.doctor.username} | {self.day} | "
+            f"{self.start_time} - {self.end_time}"
+        )
