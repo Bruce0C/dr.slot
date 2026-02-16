@@ -11,5 +11,4 @@ admin.site.register(Appointment)
 # Register your models here.
 
 admin.site.register(Service)
-admin.site.register(Appointment)
 admin.site.register(Availability)

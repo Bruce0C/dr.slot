@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from .models import Service, Availability, Appointment
+from .models import Service, Appointment
 
 # Create your views here.
 
@@ -10,6 +10,11 @@ def index(request):
     """ A view to return the index page """
 
     return render(request, 'home/index.html')
+
+
+def my_appointments(request):
+    appointments = Appointment.objects.filter(user=request.user)
+    return render(request, 'appointments/my_appointments.html', {'appointments': appointments})
 
 
 @login_required
