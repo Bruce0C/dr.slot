@@ -14,7 +14,6 @@ def index(request):
 
 @login_required
 def booking(request):
-    '''...'''
     # Ensure the user is authenticated
     if not request.user.is_authenticated:
         messages.error(request, "You need to log in to book an appointment.")
@@ -28,3 +27,36 @@ def booking(request):
 
     # Only show the days that are not fully booked
     validateWeekdays = isWeekdayValid(weekdays)
+
+    if request.method == 'POST':
+        service_id = request.POST.get('service')
+        day = request.POST.get('day')
+
+        # Validate service selection
+        if not service_id:
+            messages.error(request, "Please select a service!")
+            return redirect('booking')
+
+        # Validate day selection
+        if not day or day not in validateWeekdays:
+            messages.error(request, "Please select a valid day!")
+            return redirect('booking')
+
+        # Check if the service exists
+        try:
+            service = Service.objects.get(id=service_id)
+        except Service.DoesNotExist:
+            messages.error(request, "Invalid service selected!")
+            return redirect('booking')
+
+        # Store day and service in Django session
+        request.session['day'] = day
+        request.session['service'] = service_id
+
+        return redirect('bookingSubmit')
+
+    return render(request, 'booking.html', {
+        'services': services,
+        'weekdays': weekdays,
+        'validateWeekdays': validateWeekdays,
+    })
