@@ -35,17 +35,27 @@ class Service(models.Model):
 
 
 class Appointment(models.Model):
-    """ ...
+    """
+    Model to represent appointments booked by patients.
     """
     user = models.ForeignKey(
         User, on_delete=models.CASCADE, null=True, blank=True)
-    service = models.CharField(
-        max_length=50, choices=SERVICE_CHOICES, default="Doctor care")
+    service = models.ForeignKey(Service, on_delete=models.CASCADE)
     day = models.DateField(default=datetime.now)
     time = models.CharField(
         max_length=10, choices=TIME_CHOICES, default="3 PM")
     time_created = models.DateTimeField(default=datetime.now, blank=True)
+    status = models.CharField(
+        max_length=20,
+        choices=(
+            ("Pending", "Pending"),
+            ("Confirmed", "Confirmed"),
+            ("Cancelled", "Cancelled"),
+            ("Completed", "Completed"),
+        ),
+        default="Pending",
+    )
 
     def __str__(self):
         username = self.user.username if self.user else 'No user'
-        return f"{username} | day: {self.day} | time: {self.time}"
+        return f"{username} | {self.service.name} | {self.day} at {self.time}"
