@@ -2,28 +2,53 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .models import Service, Appointment
+from datetime import datetime, timedelta
+
 
 # Create your views here.
 
 
 def index(request):
     """ A view to return the index page """
-
     return render(request, 'home/index.html')
 
 
 def my_appointments(request):
+    """
+    A view to display the user's appointments.
+    """
     appointments = Appointment.objects.filter(user=request.user)
-    return render(request, 'appointments/my_appointments.html', {'appointments': appointments})
+    return render(
+        request,
+        'appointments/my_appointments.html',
+        {'appointments': appointments}
+    )
+
+
+def validWeekday(days):
+    """
+    Generate a list of valid weekdays for the next 'days' days.
+    """
+    today = datetime.now().date()
+    weekdays = [(today + timedelta(days=i)).strftime('%Y-%m-%d')
+                for i in range(days)]
+    return weekdays
+
+
+def isWeekdayValid(weekdays):
+    """
+    Filter weekdays to exclude fully booked days.
+    For simplicity, this example assumes no days are fully booked.
+    """
+    # Add logic to filter out fully booked days if needed
+    return weekdays
 
 
 @login_required
 def booking(request):
-    # Ensure the user is authenticated
-    if not request.user.is_authenticated:
-        messages.error(request, "You need to log in to book an appointment.")
-        return redirect('login')
-
+    """
+    A view to handle appointment booking.
+    """
     # Fetch available services
     services = Service.objects.all()
 
@@ -47,21 +72,19 @@ def booking(request):
             messages.error(request, "Please select a valid day!")
             return redirect('booking')
 
-        # Check if the service exists
-        try:
-            service = Service.objects.get(id=service_id)
-        except Service.DoesNotExist:
-            messages.error(request, "Invalid service selected!")
-            return redirect('booking')
+        # Create the appointment
+        service = Service.objects.get(id=service_id)
+        Appointment.objects.create(
+            user=request.user,
+            service=service,
+            day=day,
+            time_created=datetime.now()
+        )
+        messages.success(
+            request, "Your appointment has been successfully booked!")
+        return redirect('my_appointments')
 
-        # Store day and service in Django session
-        request.session['day'] = day
-        request.session['service'] = service_id
-
-        return redirect('bookingSubmit')
-
-    return render(request, 'booking.html', {
+    return render(request, 'appointments/booking.html', {
         'services': services,
-        'weekdays': weekdays,
-        'validateWeekdays': validateWeekdays,
+        'validateWeekdays': validateWeekdays
     })
