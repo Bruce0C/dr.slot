@@ -22,6 +22,18 @@ TIME_CHOICES = (
 )
 
 
+class Service(models.Model):
+    """
+    Model to represent the services offered by the platform.
+    """
+    name = models.CharField(max_length=50, unique=True)
+    description = models.TextField()
+    price = models.DecimalField(max_digits=10, decimal_places=2)
+
+    def __str__(self):
+        return self.name
+
+
 class Appointment(models.Model):
     """ ...
     """
