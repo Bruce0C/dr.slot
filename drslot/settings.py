@@ -27,6 +27,9 @@ DATABASES = {
     )
 }
 
+# Static files (CSS, JavaScript, Images)
+STATIC_URL = '/static/'
+
 ALLOWED_HOSTS = [
     '.herokuapp.com',
     '127.0.0.1',

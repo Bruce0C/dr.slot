@@ -1,9 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Home Page</title>
-</head>
-<body>
-    <h1>Welcome to the Home Page!</h1>
-</body>
-</html>
+{% extends 'appointments/base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<h1>Welcome to the Appointment Management System</h1>
+<p>Book appointments with healthcare providers easily and efficiently.</p>
+<a href="{% url 'booking' %}">Book an Appointment</a>
+{% endblock %}
