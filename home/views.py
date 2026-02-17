@@ -3,16 +3,16 @@ from django.shortcuts import render
 
 
 def index(request):
-    return render(request, 'home/index.html')
+    return render(request, 'appointments/index.html')
 
 
 def register(request):
-    return render(request, 'home/register.html')
+    return render(request, 'appointments/register.html')
 
 
 def booking(request):
-    return render(request, 'home/booking.html')
+    return render(request, 'appointments/booking.html')
 
 
 def my_appointments(request):
-    return render(request, 'home/my_appointments.html')
+    return render(request, 'appointments/my_appointments.html')

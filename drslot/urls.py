@@ -18,26 +18,16 @@ from django.contrib import admin
 from django.contrib.auth.views import LoginView
 from django.urls import path, include
 from appointments.views import my_appointments, index
-from home import views as home_views
+from appointments import views as appointments_views
 
-# urlpatterns = [
-#    path('admin/', admin.site.urls),
-#    path('appointments/', my_appointments, name='appointments'),
-# path('', include('home.urls')),
-# Ensure the 'index' view is defined in home/views.py
-#    path('', views.index, name='index'),
-#    path('register/', views.register, name='register'),
-#    path('login/', 'django.contrib.auth.views.LoginView.as_view()', name='login'),
-#    path('booking/', views.booking, name='booking'),
-#    path('my_appointments/', views.my_appointments, name='my_appointments'),
-# ]
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', home_views.index, name='index'),  # Corrected index view
-    path('appointments/', my_appointments, name='appointments'),
-    path('register/', home_views.register, name='register'),  # Corrected
+    # Use appointments_views.index
+    path('', appointments_views.index, name='index'),
+    path('appointments/', appointments_views.my_appointments, name='appointments'),
+    path('register/', appointments_views.register, name='register'),
     path('login/', LoginView.as_view(), name='login'),
-    path('booking/', home_views.booking, name='booking'),  # Corrected
-    path('my_appointments/', home_views.my_appointments,
-         name='my_appointments'),  # Corrected
+    path('booking/', appointments_views.booking, name='booking'),
+    path('my_appointments/', appointments_views.my_appointments,
+         name='my_appointments'),
 ]
