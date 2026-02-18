@@ -3,3 +3,67 @@ body {
     color: #212529;
     background-color: #ffffff;
 }
+
+
+/* Footer */
+footer ul {
+    background-color: #405d6c;
+    list-style-type: none;
+}
+
+#social-networks {
+    text-align: center;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+
+#social-networks i {
+    font-size: 160%;
+    padding: 5%;
+    color: #ffffff
+}
+
+/* Media query: tablets and larger (768px and up) */
+@media screen and (min-width: 768px) {
+
+    /* Header */
+    nav {
+        display: block;
+        position: relative;
+        box-shadow: none;
+        width: fit-content;
+        padding-right: 1rem;
+    }
+
+    #menu {
+        display: flex;
+    }
+
+    #menu li {
+        padding-left: 1rem;
+    }
+
+    .nav-toggle-label {
+        display: none;
+    }
+
+    #logo {
+        margin: 1.5rem;
+        margin-top: 1rem;
+    }
+
+    /* Maint content*/
+    main {
+        /* Push main content down to accomodate larger header */
+        margin-top: 79px;
+    }
+}
+
+/* Larger devices (laptops and desktops, 992px and up */
+@media screen and (min-width: 992px) {
+    #menu a:hover {
+        border-bottom: 1px solid #ffffff;
+    }
+}

@@ -57,9 +57,96 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-3">
-        <p>&copy; 2023 DR.Slot Appointment Management </p>
-    </footer>
+ <!-- Updated Footer -->
+<footer class="bg-dark text-white">
+    <div class="container-fluid pt-4">
+        <div class="container text-center text-md-start">
+            <!-- Grid row -->
+            <div class="row mt-3">
+                <!-- Contact Us Column -->
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
+                    <h5 class="text-uppercase fw-bold mb-4 textGradient" id="contact">
+                        Contact Us
+                    </h5>
+                    <p>
+                        <i class="fas fa-phone-alt"></i> Tel: +123-456-7890
+                    </p>
+                    <p>
+                        <i class="fas fa-envelope"></i> Email: support@drslot.com
+                    </p>
+                    <p>
+                        <i class="fas fa-map-marker-alt"></i> Address: 123 Health St, Wellness City
+                    </p>
+                </div>
+                <!-- Services Column -->
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
+                    <h5 class="text-uppercase fw-bold mb-4 textGradient">
+                        Services
+                    </h5>
+                    <p>
+                        <a href="{% url 'index' %}" class="uLine cHover">Book an Appointment</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="uLine cHover">Doctor Consultation</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="uLine cHover">Health Checkups</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="uLine cHover">Emergency Services</a>
+                    </p>
+                </div>
+                <!-- Quick Links Column -->
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
+                    <h5 class="text-uppercase fw-bold mb-4 textGradient">
+                        Quick Links
+                    </h5>
+                    <p>
+                        <a href="{% url 'index' %}" class="uLine cHover">Home</a>
+                    </p>
+                    <p>
+                        <a href="{% url 'login' %}" class="uLine cHover">Login</a>
+                    </p>
+                    <p>
+                        <a href="{% url 'register' %}" class="uLine cHover">Register</a>
+                    </p>
+                    <p>
+                        <a href="{% url 'my_appointments' %}" class="uLine cHover">My Appointments</a>
+                    </p>
+                </div>
+                <!-- Social Media Links Column -->
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
+                    <h5 class="text-uppercase fw-bold mb-4 textGradient">
+                        Follow Us
+                    </h5>
+                    <a href="https://facebook.com" class="text-white me-4">
+                        <i class="fab fa-facebook-f"></i> Facebook
+                    </a>
+                    <br>
+                    <a href="https://twitter.com" class="text-white me-4">
+                        <i class="fab fa-twitter"></i> Twitter
+                    </a>
+                    <br>
+                    <a href="https://instagram.com" class="text-white me-4">
+                        <i class="fab fa-instagram"></i> Instagram
+                    </a>
+                    <br>
+                    <a href="https://linkedin.com" class="text-white me-4">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                </div>
+            </div>
+            <!-- Grid row -->
+            <div class="text-center py-3">
+                <p>&copy; 2023 DR.Slot Appointment Management System. All Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+     <!-- Font Awesome kit-->
+ <script src="https://kit.fontawesome.com/9395030664.js" crossorigin="anonymous"></script>
 
     <!-- Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poTn3w5ZT9fNQZ8auQeFQmXa1pMnKjCFLRXEw+PB5y5tUpFm049" crossorigin="anonymous"></script>
