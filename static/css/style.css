@@ -17,7 +17,7 @@ body {
 
 /* Header */
 header {
-    padding: 0 1rem;
+    padding: 0;
     border-left: 0px;
     position: fixed;
     z-index: 99;
@@ -39,35 +39,42 @@ header {
 
 }
 
-/* Navbar styles with dropdown toggle */
-nav {
-    position: absolute;
-    box-shadow: 0 2px 2px #3a3a3a;
-    width: 100%;
-    left: 0;
-    padding: 0 1rem;
-    display: none;
-    top: 100%;
+/* Navbar styles */
+.navbar {
+    width: 100%; 
+    margin: 0; 
+    padding: 0; 
 }
 
-/* Highlight the active page */
-.navbar-nav .nav-item.active .nav-link {
-    font-weight: bold;
-    color: #f8f9fa !important; /* White color for active link */
-    border-bottom: 2px solid #f8f9fa; /* Underline for active link */
+/* Navbar links */
+.navbar-nav {
+    display: flex;
+ /*   justify-content: space-between; /* Spread out the nav items */
+    width: 100%; /* Ensure the nav items span the full width */
 }
 
-/* Hover effect for nav links */
+.navbar-nav .nav-item {
+    flex: 1; /* Make each nav item take equal space */
+    text-align: center; /* Center the text in each nav item */
+}
+
+.navbar-nav .nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
 .navbar-nav .nav-link:hover {
-    color: #ffc107 !important; /* Highlight color on hover */
+    color: #ffc107; /* Highlight color on hover */
     text-decoration: underline;
 }
 
-/* Adjust navbar brand font */
-.navbar-brand {
-    font-size: 1.5rem;
+/* Active link styling */
+.navbar-nav .nav-item.active .nav-link {
     font-weight: bold;
-    color: #ffc107 !important; /* Highlight color for brand */
+    color: #ffc107; /* Highlight color for active link */
+    border-bottom: 2px solid #ffc107; /* Underline for active link */
 }
 
 /* Main content styles */
@@ -75,7 +82,6 @@ main {
     margin-top: 100px; /* Add margin to prevent overlap with the fixed header */
     padding: 40px; /* Add padding for better spacing */
 }
-
 
 /* Footer */
 footer ul {
@@ -103,8 +109,9 @@ footer ul {
     /* Header */
 
     .navbar-nav {
-        text-align: center;
+        flex-direction: column; /* Stack nav items vertically on smaller screens */
     }
+
     .navbar-nav .nav-item {
         margin-bottom: 10px;
     }
