@@ -15,6 +15,7 @@ import os
 from pathlib import Path
 import dj_database_url
 
+
 # Define the base directory
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -55,6 +56,7 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'allauth',
     'allauth.account',
+    'allauth.socialaccount',
 
     'appointments',
     'home'
@@ -68,10 +70,16 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'allauth.account.middleware.AccountMiddleware',
+
 ]
 
 ROOT_URLCONF = 'drslot.urls'
+WSGI_APPLICATION = 'drslot.wsgi.application'
+
+SITE_ID = 1
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
+
 
 TEMPLATES = [
     {
@@ -88,12 +96,6 @@ TEMPLATES = [
         },
     },
 ]
-
-WSGI_APPLICATION = 'drslot.wsgi.application'
-
-SITE_ID = 1
-LOGIN_REDIRECT_URL = '/'
-LOGOUT_REDIRECT_URL = '/'
 
 
 # Database
@@ -114,6 +116,11 @@ DATABASES = {
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',  # Default authentication backend
+    'allauth.account.auth_backends.AuthenticationBackend',  # Allauth backend
+]
 
 AUTH_PASSWORD_VALIDATORS = [
     {
