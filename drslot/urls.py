@@ -16,15 +16,18 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.contrib.auth.views import LoginView
-from django.urls import path, include
-from appointments.views import my_appointments, index
+from django.urls import path
 from appointments import views as appointments_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     # Use appointments_views.index
     path('', appointments_views.index, name='index'),
-    path('appointments/', appointments_views.my_appointments, name='appointments'),
+    path(
+        'appointments/',
+        appointments_views.my_appointments,
+        name='appointments'
+    ),
     path('register/', appointments_views.register, name='register'),
     path('login/', LoginView.as_view(), name='login'),
     path('booking/', appointments_views.booking, name='booking'),
