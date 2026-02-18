@@ -1,7 +1,79 @@
-body {
+/* Asterisk wild card selector to overide default styles added by browser*/
+* {
+    padding: 0;
     margin: 0;
+    box-sizing: border-box;
+}
+
+body {
     color: #212529;
     background-color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    text-align: center;
+}
+
+/* Header */
+header {
+    padding: 0 1rem;
+    border-left: 0px;
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    box-shadow: 0 2px 2px #3a3a3a;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: baseline;
+}
+
+#menu {
+    font-size: 110%;
+    letter-spacing: 4px;
+    list-style-type: none;
+}
+
+#menu li {
+    margin-bottom: 1em;
+
+}
+
+/* Navbar styles with dropdown toggle */
+nav {
+    position: absolute;
+    box-shadow: 0 2px 2px #3a3a3a;
+    width: 100%;
+    left: 0;
+    padding: 0 1rem;
+    display: none;
+    top: 100%;
+}
+
+/* Highlight the active page */
+.navbar-nav .nav-item.active .nav-link {
+    font-weight: bold;
+    color: #f8f9fa !important; /* White color for active link */
+    border-bottom: 2px solid #f8f9fa; /* Underline for active link */
+}
+
+/* Hover effect for nav links */
+.navbar-nav .nav-link:hover {
+    color: #ffc107 !important; /* Highlight color on hover */
+    text-decoration: underline;
+}
+
+/* Adjust navbar brand font */
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffc107 !important; /* Highlight color for brand */
+}
+
+/* Main content styles */
+main {
+    margin-top: 100px; /* Add margin to prevent overlap with the fixed header */
+    padding: 40px; /* Add padding for better spacing */
 }
 
 
@@ -29,6 +101,13 @@ footer ul {
 @media screen and (min-width: 768px) {
 
     /* Header */
+
+    .navbar-nav {
+        text-align: center;
+    }
+    .navbar-nav .nav-item {
+        margin-bottom: 10px;
+    }
     nav {
         display: block;
         position: relative;
