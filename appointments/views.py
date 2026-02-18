@@ -18,3 +18,11 @@ def booking(request):
 
 def my_appointments(request):
     return render(request, 'appointments/my_appointments.html')
+
+
+def user_login(request):
+    return render(request, 'appointments/login.html')
+
+
+def user_logout(request):
+    return redirect('login')  # Redirect to login page after logout

@@ -30,6 +30,7 @@ urlpatterns = [
     ),
     path('register/', appointments_views.register, name='register'),
     path('login/', LoginView.as_view(), name='login'),
+    path('logout/', LoginView.as_view(), name='logout'),
     path('booking/', appointments_views.booking, name='booking'),
     path('my_appointments/', appointments_views.my_appointments,
          name='my_appointments'),
