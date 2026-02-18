@@ -34,4 +34,5 @@ urlpatterns = [
     path('booking/', appointments_views.booking, name='booking'),
     path('my_appointments/', appointments_views.my_appointments,
          name='my_appointments'),
+
 ]
