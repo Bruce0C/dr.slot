@@ -65,8 +65,14 @@ def booking(request):
     })
 
 
+@login_required
 def my_appointments(request):
-    return render(request, 'appointments/my_appointments.html')
+    # Fetch all appointments for the logged-in user
+    appointments = Appointment.objects.filter(
+        user=request.user).order_by('-date', '-time')
+    return render(request, 'appointments/my_appointments.html', {
+        'appointments': appointments
+    })
 
 
 def user_login(request):
