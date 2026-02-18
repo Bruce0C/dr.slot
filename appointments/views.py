@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
-from .models import Service
+from .models import Service, Appointment
+from django.contrib import messages
 
 # Create your views here.
 
@@ -14,8 +15,33 @@ def register(request):
 
 def booking(request):
     services = Service.objects.all()
-    validateWeekdays = ['2026-10-25',
-                        '2026-10-26', '2026-10-27']  # Example data
+    validateWeekdays = ['Monday', 'Tuesday', 'Wednesday',
+                        'Thursday', 'Friday']  # Example weekdays
+
+    if request.method == 'POST':
+        service_id = request.POST.get('service')
+        date = request.POST.get('date')
+        time = request.POST.get('time')
+
+        if not service_id or not date or not time:
+            messages.error(request, "Please fill out all fields.")
+            return render(request, 'appointments/booking.html', {
+                'services': services,
+                'validateWeekdays': validateWeekdays
+            })
+
+        # Save the appointment
+        service = Service.objects.get(id=service_id)
+        Appointment.objects.create(
+            user=request.user,
+            service=service,
+            date=date,
+            time=time
+        )
+        messages.success(
+            request, "Your appointment has been booked successfully!")
+        return redirect('my_appointments')
+
     return render(request, 'appointments/booking.html', {
         'services': services,
         'validateWeekdays': validateWeekdays
