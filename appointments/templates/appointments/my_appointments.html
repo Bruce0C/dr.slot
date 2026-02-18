@@ -1,15 +1,35 @@
 {% extends 'base.html' %}
 
-{% block title %}My Appointments{% endblock %}
+{% block title %}
+My Appointments
+{% endblock %}
 
 {% block content %}
-<h2>My Appointments</h2>
-<ul>
-    {% for appointment in appointments %}
-        <li>
-            {{ appointment.service.name }} on {{ appointment.day }} at {{ appointment.time }}
-            (Status: {{ appointment.status }})
-        </li>
-    {% endfor %}
-</ul>
+<div class="container">
+    <h2>My Appointments</h2>
+    {% if appointments %}
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Service</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Booked On</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for appointment in appointments %}
+                    <tr>
+                        <td>{{ appointment.service.name }}</td>
+                        <td>{{ appointment.date }}</td>
+                        <td>{{ appointment.time }}</td>
+                        <td>{{ appointment.created_at|date:"Y-m-d H:i" }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>You have no appointments booked.</p>
+    {% endif %}
+</div>
 {% endblock %}
