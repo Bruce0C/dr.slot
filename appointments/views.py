@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-
+from .models import Service
 
 # Create your views here.
 
@@ -13,7 +13,13 @@ def register(request):
 
 
 def booking(request):
-    return render(request, 'appointments/booking.html')
+    services = Service.objects.all()
+    validateWeekdays = ['2026-10-25',
+                        '2026-10-26', '2026-10-27']  # Example data
+    return render(request, 'appointments/booking.html', {
+        'services': services,
+        'validateWeekdays': validateWeekdays
+    })
 
 
 def my_appointments(request):
