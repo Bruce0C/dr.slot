@@ -1,0 +1,155 @@
+/* Asterisk wild card selector to overide default styles added by browser*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #212529;
+    background-color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    text-align: center;
+}
+
+/* Header */
+header {
+    padding: 0;
+    border-left: 0px;
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    box-shadow: 0 2px 2px #3a3a3a;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: baseline;
+}
+
+#menu {
+    font-size: 110%;
+    letter-spacing: 4px;
+    list-style-type: none;
+}
+
+#menu li {
+    margin-bottom: 1em;
+
+}
+
+/* Navbar styles */
+.navbar {
+    width: 100%; 
+    margin: 0; 
+    padding: 0; 
+}
+
+/* Navbar links */
+.navbar-nav {
+    display: flex;
+   justify-content: space-between; /* Spread out the nav items */
+    width: 100%; /* Ensure the nav items span the full width */
+}
+
+.navbar-nav .nav-item {
+    flex: 1; 
+    text-align: center; 
+}
+
+.navbar-nav .nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffc107; /* Highlight color on hover */
+    text-decoration: underline;
+}
+
+/* Active link styling */
+.navbar-nav .nav-item.active .nav-link {
+    font-weight: bold;
+    color: #ffc107; /* Highlight color for active link */
+    border-bottom: 2px solid #ffc107; /* Underline for active link */
+}
+
+/* Main content styles */
+main {
+    margin-top: 100px; /* Add margin to prevent overlap with the fixed header */
+    padding: 40px;
+}
+
+/* Footer */
+footer ul {
+    background-color: #405d6c;
+    list-style-type: none;
+}
+
+#social-networks {
+    text-align: center;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+
+#social-networks i {
+    font-size: 160%;
+    padding: 5%;
+    color: #ffffff
+}
+
+/* Media query: tablets and larger (768px and up) */
+@media screen and (min-width: 768px) {
+
+    /* Header */
+
+    .navbar-nav {
+        flex-direction: column; /* Stack nav items vertically on smaller screens */
+    }
+
+    .navbar-nav .nav-item {
+        margin-bottom: 10px;
+    }
+    nav {
+        display: block;
+        position: relative;
+        box-shadow: none;
+        width: fit-content;
+        padding-right: 1rem;
+    }
+
+    #menu {
+        display: flex;
+    }
+
+    #menu li {
+        padding-left: 1rem;
+    }
+
+    .nav-toggle-label {
+        display: none;
+    }
+
+    #logo {
+        margin: 1.5rem;
+        margin-top: 1rem;
+    }
+
+    /* Maint content*/
+    main {
+        /* Push main content down to accomodate larger header */
+        margin-top: 79px;
+    }
+}
+
+/* Larger devices (laptops and desktops, 992px and up */
+@media screen and (min-width: 992px) {
+    #menu a:hover {
+        border-bottom: 1px solid #ffffff;
+    }
+}
