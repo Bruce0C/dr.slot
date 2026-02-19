@@ -1,3 +1,7 @@
+"""
+Models for the appointments app, including Service,
+Appointment, and Availability.
+"""
 from datetime import date
 from django.db import models
 from django.contrib.auth.models import User
@@ -25,11 +29,14 @@ TIME_CHOICES = [
 
 
 class Service(models.Model):
+    '''
+    Model to represent a service offered by the clinic.
+    '''
     name = models.CharField(max_length=100)
     description = models.TextField()
 
     def __str__(self):
-        return self.name
+        return str(self.name)
 
 
 class Appointment(models.Model):
@@ -45,8 +52,8 @@ class Appointment(models.Model):
 
     def __str__(self):
         return (
-            f"{self.user.username} - {self.service.name} on {self.date} "
-            f"at {self.time}"
+            f"{self.user.username if self.user else 'No user'} - "
+            f"{self.service.name} on {self.date}"
         )
 
 
@@ -63,6 +70,6 @@ class Availability(models.Model):
 
     def __str__(self):
         return (
-            f"{self.doctor.username} | {self.day} | "
-            f"{self.start_time} - {self.end_time}"
+            f"{self.doctor.username if self.doctor else 'No doctor'} |"
+            f" {self.day} | {self.start_time} - {self.end_time}"
         )

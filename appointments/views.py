@@ -48,23 +48,6 @@ def booking(request):
         'services': services,
     })
 
-    # Save the appointment
-    service = Service.objects.get(id=service_id)
-    Appointment.objects.create(
-        user=request.user,
-        service=service,
-        date=date,
-        time=time
-    )
-    messages.success(
-        request, "Your appointment has been booked successfully!")
-    return redirect('my_appointments')
-
-    return render(request, 'appointments/booking.html', {
-        'services': services,
-        'validateWeekdays': validateWeekdays
-    })
-
 
 @login_required
 def my_appointments(request):
