@@ -17,7 +17,7 @@ def register(request):
 
 def service_view(request):
     """
-    View to display available services. 
+    View to display available services.
     This view is accessible to all users.
     """
     return render(request, 'appointments/service.html', {
@@ -43,17 +43,23 @@ def booking(request):
             })
 
         # Save the appointment
-        service = Service.objects.get(id=service_id)
-        Appointment.objects.create(
-            user=request.user,
-            service=service,
-            date=date,
-            time=time
-        )
-        messages.success(
-            request, "Your appointment has been booked successfully!")
-        # Redirect to "My Appointments" page
-        return redirect('my_appointments')
+        try:
+            service = Service.objects.get(id=service_id)
+            Appointment.objects.create(
+                user=request.user,
+                service=service,
+                date=date,
+                time=time
+            )
+            messages.success(
+                request, "Your appointment has been booked successfully!")
+            # Redirect to "My Appointments" page
+            return redirect('my_appointments')
+        except Service.DoesNotExist:
+            messages.error(request, "The selected service does not exist.")
+            return render(request, 'appointments/booking.html', {
+                'services': services,
+            })
 
     return render(request, 'appointments/booking.html', {
         'services': services,
@@ -62,7 +68,7 @@ def booking(request):
 
 @login_required
 def my_appointments(request):
-    # Fetch all appointments for the logged-in user
+    """View to display the user's appointments."""
     appointments = Appointment.objects.filter(
         user=request.user).order_by('-date', '-time')
     return render(request, 'appointments/my_appointments.html', {
