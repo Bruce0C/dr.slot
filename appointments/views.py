@@ -169,3 +169,8 @@ def user_logout(request):
     """View to handle user logout."""
     logout(request)  # Log out the user
     return redirect('login')  # Redirect to login page after logout
+
+
+def error_404_view(request, _exception):
+    """Custom 404 error handler."""
+    return render(request, 'appointments/error_404.html', status=404)

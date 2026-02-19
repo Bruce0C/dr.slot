@@ -5,12 +5,18 @@
 [![GitHub repo size](https://img.shields.io/github/repo-size/Bruce0C/dr.slot)](https://www.github.com/Bruce0C/dr.slot)
 [![badge](https://img.shields.io/badge/deployment-Heroku-purple)](https://drslot-e9b130b994da.herokuapp.com)
 
-dr.slot is a Django-based web application designed to manage appointments for healthcare services. The project allows users to book appointments for various services such as doctor care and nursing care. It provides a simple and user-friendly interface for both users and administrators to manage appointments efficiently.
+Dr.slot is a Django-based web application designed to manage appointments for healthcare services. The project allows users to book appointments for various services such as doctor care and nursing care. It provides a simple and user-friendly interface for both users and administrators to manage appointments efficiently.
 
 ![screenshot](documentation/mockup.png)
 
 source: [dr.slot amiresponsive](https://ui.dev/amiresponsive?url=https://https://drslot-e9b130b994da.herokuapp.com/)
 
+
+ ## Profiles
+
+**Patient**
+- Username: Test
+- Password: 1avbrook
 
 ## UX
 
@@ -21,12 +27,10 @@ source: [dr.slot amiresponsive](https://ui.dev/amiresponsive?url=https://https:/
  - **Purpose**
      - Provide healthcare providers with tools to manage appointments and availability efficiently.
      - Offer patients an intuitive platform to book, reschedule, or cancel appointments.
-     - Enable administrators to oversee and manage users, appointments, and services.
 
 **Primary User Needs**
 - Patients need a seamless way to book, view, reschedule, or cancel appointments.
-- Doctors need tools to manage their availability and appointments.
-- Admins need the ability to manage users, appointments, and services.
+- Doctors need tools to view their availability and appointments.
 
 **Business Goals**
 - Build a reliable appointment management system that fosters trust between patients and healthcare providers.
@@ -36,11 +40,9 @@ source: [dr.slot amiresponsive](https://ui.dev/amiresponsive?url=https://https:/
 **2. Scope**
 
 **Features**
-- User authentication and role-based access (patients, doctors, admins).
+- User authentication and role-based access (patients, doctors).
 - Appointment booking, rescheduling, and cancellation for patients.
 - Availability management for doctors.
-- Admin dashboard for managing users, appointments, and services.
-- Email notifications for appointment confirmations, reminders, and updates.
 - Error handling (e.g., 404 error page for invalid URLs).
 
 **Content Requirements**

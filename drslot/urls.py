@@ -18,6 +18,8 @@ from django.contrib import admin
 from django.urls import path, include
 from appointments import views as appointments_views
 
+HANDLER404 = 'appointments.views.error_404_view'
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     # Use appointments_views.index
