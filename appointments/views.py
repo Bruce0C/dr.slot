@@ -1,22 +1,23 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth import logout
 from .models import Service, Appointment, TIME_CHOICES
 
 
-# Create your views here.
-
-
 def index(request):
+    """View to render the homepage of the appointment booking system."""
     return render(request, 'appointments/index.html')
 
 
 def register(request):
+    """View to handle user registration. """
     return render(request, 'appointments/register.html')
 
 
 @login_required
 def booking(request):
+    """View to handle appointment booking."""
     services = Service.objects.all()
 
     if request.method == 'POST':
@@ -60,8 +61,11 @@ def my_appointments(request):
 
 
 def user_login(request):
+    """View to handle user login"""
     return render(request, 'appointments/login.html')
 
 
 def user_logout(request):
+    """View to handle user logout."""
+    logout(request)  # Log out the user
     return redirect('login')  # Redirect to login page after logout
