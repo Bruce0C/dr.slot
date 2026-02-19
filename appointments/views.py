@@ -15,8 +15,21 @@ def index(request):
 
 
 def register(request):
-    """View to handle user registration. """
-    return render(request, 'appointments/register.html')
+    """View to handle user registration."""
+    form = RegistrationForm(request.POST or None)
+
+    if request.method == 'POST':
+        if form.is_valid():
+            form.save()
+            messages.success(
+                request, "Registration successful! You can now log in.")
+            return redirect('login')
+        else:
+            messages.error(
+                request, "There was an error with your registration."
+                " Please try again.")
+
+    return render(request, 'appointments/register.html', {'form': form})
 
 
 def service_view(request):
