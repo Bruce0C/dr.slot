@@ -9,7 +9,7 @@ dr.slot is a Django-based web application designed to manage appointments for he
 
 ![screenshot](documentation/mockup.png)
 
-source: [dr.slot amiresponsive](https://ui.dev/amiresponsive?url=https://drslot-e9b130b994da.herokuapp.com)
+source: [dr.slot amiresponsive](https://ui.dev/amiresponsive?url=https://https://drslot-e9b130b994da.herokuapp.com/)
 
 
 ## UX
