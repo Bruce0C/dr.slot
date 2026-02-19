@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout
-from .models import Service, Appointment, TIME_CHOICES
+from .models import Service, Appointment, TIME_CHOICES, TIME_CHOICES
 
 
 def index(request):
@@ -13,6 +13,16 @@ def index(request):
 def register(request):
     """View to handle user registration. """
     return render(request, 'appointments/register.html')
+
+
+def service_view(request):
+    """
+    View to display available services. 
+    This view is accessible to all users.
+    """
+    return render(request, 'appointments/service.html', {
+        'service_choices': Service.objects.all()
+    })
 
 
 @login_required
