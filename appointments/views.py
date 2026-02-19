@@ -93,12 +93,12 @@ def my_appointments(request):
 
 @login_required
 def edit_appointment(request, appointment_id):
-    """View to edit an appointment."""
+    """View to edit an existing appointment."""
     appointment = get_object_or_404(
         Appointment, id=appointment_id, user=request.user)
     services = Service.objects.all()
 
-    if request.method == "POST":
+    if request.method == 'POST':
         service_id = request.POST.get('service')
         date = request.POST.get('date')
         time = request.POST.get('time')
@@ -106,6 +106,17 @@ def edit_appointment(request, appointment_id):
         # Validate form inputs
         if not service_id or not date or not time:
             messages.error(request, "Please fill out all fields.")
+            return render(request, 'appointments/edit_appointment.html', {
+                'appointment': appointment,
+                'services': services,
+            })
+
+        # Validate and convert the date format
+        try:
+            date = datetime.strptime(date, '%Y-%m-%d').date()
+        except ValueError:
+            messages.error(
+                request, "Invalid date format. Please use YYYY-MM-DD.")
             return render(request, 'appointments/edit_appointment.html', {
                 'appointment': appointment,
                 'services': services,
