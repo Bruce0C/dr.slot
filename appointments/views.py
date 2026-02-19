@@ -1,7 +1,8 @@
 from django.shortcuts import render, redirect
-from .models import Service, Appointment
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from .models import Service, Appointment, TIME_CHOICES
+
 
 # Create your views here.
 

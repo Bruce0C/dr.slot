@@ -9,18 +9,19 @@ SERVICE_CHOICES = (
     ("Doctor care", "Nurse care"),
     ("Nursing care", "Nursing care"),
 )
-TIME_CHOICES = (
-    ("3 PM", "3 PM"),
-    ("3:30 PM", "3:30 PM"),
-    ("4 PM", "4 PM"),
-    ("4:30 PM", "4:30 PM"),
-    ("5 PM", "5 PM"),
-    ("5:30 PM", "5:30 PM"),
-    ("6 PM", "6 PM"),
-    ("6:30 PM", "6:30 PM"),
-    ("7 PM", "7 PM"),
-    ("7:30 PM", "7:30 PM"),
-)
+
+# Define available time slots
+TIME_CHOICES = [
+    ("09:00", "09:00 AM"),
+    ("10:00", "10:00 AM"),
+    ("11:00", "11:00 AM"),
+    ("12:00", "12:00 PM"),
+    ("13:00", "01:00 PM"),
+    ("14:00", "02:00 PM"),
+    ("15:00", "03:00 PM"),
+    ("16:00", "04:00 PM"),
+    ("17:00", "05:00 PM"),
+]
 
 
 class Service(models.Model):
