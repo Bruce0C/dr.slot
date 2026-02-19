@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout
-from .models import Service, Appointment, TIME_CHOICES, TIME_CHOICES
+from .models import Service, Appointment, TIME_CHOICES, SERVICE_CHOICES
 
 
 def index(request):
@@ -73,6 +73,48 @@ def my_appointments(request):
         user=request.user).order_by('-date', '-time')
     return render(request, 'appointments/my_appointments.html', {
         'appointments': appointments
+    })
+
+
+@login_required
+def edit_appointment(request, appointment_id):
+    """View to edit an appointment."""
+    appointment = get_object_or_404(
+        Appointment, id=appointment_id, user=request.user)
+    services = Service.objects.all()
+
+    if request.method == "POST":
+        service_id = request.POST.get('service')
+        date = request.POST.get('date')
+        time = request.POST.get('time')
+
+        # Validate form inputs
+        if not service_id or not date or not time:
+            messages.error(request, "Please fill out all fields.")
+            return render(request, 'appointments/edit_appointment.html', {
+                'appointment': appointment,
+                'services': services,
+            })
+
+        # Update the appointment
+        try:
+            service = Service.objects.get(id=service_id)
+            appointment.service = service
+            appointment.date = date
+            appointment.time = time
+            appointment.save()
+            messages.success(request, "Appointment updated successfully!")
+            return redirect('my_appointments')
+        except Service.DoesNotExist:
+            messages.error(request, "The selected service does not exist.")
+            return render(request, 'appointments/edit_appointment.html', {
+                'appointment': appointment,
+                'services': services,
+            })
+
+    return render(request, 'appointments/edit_appointment.html', {
+        'appointment': appointment,
+        'services': services,
     })
 
 

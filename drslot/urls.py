@@ -38,4 +38,6 @@ urlpatterns = [
     path('delete_appointment/<int:appointment_id>/',
          appointments_views.delete_appointment,
          name='delete_appointment'),
+    path('edit_appointment/<int:appointment_id>/',
+         appointments_views.edit_appointment, name='edit_appointment'),
 ]
