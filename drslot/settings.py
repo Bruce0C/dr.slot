@@ -36,11 +36,13 @@ DATABASES = {
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 ALLOWED_HOSTS = [
     '.herokuapp.com',
     '127.0.0.1',
     'localhost',
+    'drslot-e9b130b994da.herokuapp.com'
 ]
 
 
