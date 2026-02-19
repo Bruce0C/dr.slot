@@ -80,18 +80,15 @@ def booking(request):
                 date=date,
                 time=time
             )
-            messages.success(
-                request, "Your appointment has been booked successfully!")
+            # Add success message
+            messages.success(request, "Booking created successfully!")
+            # Redirect to "My Appointments" page
             return redirect('my_appointments')
         except Service.DoesNotExist:
             messages.error(request, "The selected service does not exist.")
-            return render(request, 'appointments/booking.html', {
-                'services': services,
-            })
+            return render(request, 'appointments/booking.html', {'services': services})
 
-    return render(request, 'appointments/booking.html', {
-        'services': services,
-    })
+    return render(request, 'appointments/booking.html', {'services': services})
 
 
 @login_required

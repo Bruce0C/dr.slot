@@ -81,42 +81,7 @@
                         <i class="fas fa-map-marker-alt"></i> Address: 123 Health St, Wellness City
                     </p>
                 </div>
-                <!-- Services Column -->
-                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
-                    <h5 class="text-uppercase fw-bold mb-4 textGradient">
-                        Services
-                    </h5>
-                    <p>
-                        <a href="{% url 'index' %}" class="uLine cHover">Book an Appointment</a>
-                    </p>
-                    <p>
-                        <a href="#!" class="uLine cHover">Doctor Consultation</a>
-                    </p>
-                    <p>
-                        <a href="#!" class="uLine cHover">Health Checkups</a>
-                    </p>
-                    <p>
-                        <a href="#!" class="uLine cHover">Emergency Services</a>
-                    </p>
-                </div>
-                <!-- Quick Links Column -->
-                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
-                    <h5 class="text-uppercase fw-bold mb-4 textGradient">
-                        Quick Links
-                    </h5>
-                    <p>
-                        <a href="{% url 'index' %}" class="uLine cHover">Home</a>
-                    </p>
-                    <p>
-                        <a href="{% url 'account_login' %}" class="uLine cHover">Login</a>
-                    </p>
-                    <p>
-                        <a href="{% url 'account_signup' %}" class="uLine cHover">Register</a>
-                    </p>
-                    <p>
-                        <a href="{% url 'my_appointments' %}" class="uLine cHover">My Appointments</a>
-                    </p>
-                </div>
+
                 <!-- Social Media Links Column -->
                 <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
                     <h5 class="text-uppercase fw-bold mb-4 textGradient">
@@ -163,21 +128,21 @@
      <script type="text/javascript">
          $('.toast').toast('show');
      </script>
-     <div aria-live="polite" aria-atomic="true" class="position-relative">
-        <div class="toast-container position-fixed top-0 end-0 p-3" style="z-index: 1055;">
-            {% if messages %}
-                {% for message in messages %}
-                    {% if message.tags == 'success' %}
-                        {% include 'toasts/toast_success.html' %}
-                    {% elif message.tags == 'error' %}
-                        {% include 'toasts/toast_error.html' %}
-                    {% elif message.tags == 'warning' %}
-                        {% include 'toasts/toast_warning.html' %}
-                    {% endif %}
-                {% endfor %}
-            {% endif %}
-        </div>
+<div aria-live="polite" aria-atomic="true" class="position-relative">
+    <div class="toast-container position-fixed top-0 end-0 p-3" style="z-index: 1055;">
+        {% if messages %}
+            {% for message in messages %}
+                {% if message.tags == 'success' %}
+                    {% include 'toasts/toast_success.html' %}
+                {% elif message.tags == 'error' %}
+                    {% include 'toasts/toast_error.html' %}
+                {% elif message.tags == 'warning' %}
+                    {% include 'toasts/toast_warning.html' %}
+                {% endif %}
+            {% endfor %}
+        {% endif %}
     </div>
+</div>
  
      <!-- Flatpickr Initialization -->
      <script>
