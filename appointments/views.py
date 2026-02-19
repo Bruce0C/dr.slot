@@ -171,11 +171,7 @@ def delete_appointment(request, appointment_id):
         messages.success(request, "Appointment deleted successfully!")
         return redirect('my_appointments')
 
-    return render(
-        request,
-        'appointments/confirm_delete.html',
-        {'appointment': appointment}
-    )
+    return render(request, 'appointments/confirm_delete.html', {'appointment': appointment})
 
 
 def user_login(request):
