@@ -1,3 +1,7 @@
+"""
+Views for the appointment booking system. This module contains all the views
+"""
+from datetime import datetime
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
@@ -27,7 +31,9 @@ def service_view(request):
 
 @login_required
 def booking(request):
-    """View to handle appointment booking."""
+    """View to handle appointment booking.
+    This view is only accessible to logged-in users.
+    """
     services = Service.objects.all()
 
     if request.method == 'POST':
@@ -38,6 +44,16 @@ def booking(request):
         # Validate form inputs
         if not service_id or not date or not time:
             messages.error(request, "Please fill out all fields.")
+            return render(request, 'appointments/booking.html', {
+                'services': services,
+            })
+
+        # Validate date format
+        try:
+            date = datetime.strptime(date, '%Y-%m-%d').date()
+        except ValueError:
+            messages.error(
+                request, "Invalid date format. Please use YYYY-MM-DD.")
             return render(request, 'appointments/booking.html', {
                 'services': services,
             })
@@ -53,7 +69,6 @@ def booking(request):
             )
             messages.success(
                 request, "Your appointment has been booked successfully!")
-            # Redirect to "My Appointments" page
             return redirect('my_appointments')
         except Service.DoesNotExist:
             messages.error(request, "The selected service does not exist.")

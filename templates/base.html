@@ -13,6 +13,9 @@
  
  <!-- Custom CSS -->
  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+ 
+ <!-- Include Flatpickr CSS and JS -->
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 </head>
 <body>
      <!-- Navigation Bar -->
@@ -144,19 +147,39 @@
     </div>
 </footer>
 
+{% block scripts %}
+     <!-- Font Awesome kit -->
+     <script src="https://kit.fontawesome.com/9395030664.js" crossorigin="anonymous"></script>
 
-<!-- Font Awesome kit -->
-<script src="https://kit.fontawesome.com/9395030664.js" crossorigin="anonymous"></script>
-
-<!-- Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.4/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-
-<!-- Toast -->
-<script type="text/javascript">
-    $('.toast').toast('show');
-  </script>
+     <!-- Flatpickr JS -->
+     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+ 
+     <!-- Bootstrap JS -->
+     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.4/dist/umd/popper.min.js"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+ 
+     <!-- Toast -->
+     <script type="text/javascript">
+         $('.toast').toast('show');
+     </script>
+ 
+     <!-- Flatpickr Initialization -->
+     <script>
+         document.addEventListener("DOMContentLoaded", function () {
+             flatpickr("#date", {
+                 minDate: "today", // Disable past dates
+                 dateFormat: "Y-m-d", // Ensure the format is YYYY-MM-DD
+                 disable: [
+                     function(date) {
+                         // Disable weekends (Saturday and Sunday)
+                         return (date.getDay() === 0 || date.getDay() === 6);
+                     }
+                 ]
+             });
+         });
+     </script>
+{% endblock %}
 
 </body>
 </html>
