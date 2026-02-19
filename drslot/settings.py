@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv('SECRET_KEY', 'fallback-secret-key')
 
 # Set debug mode based on the DEVELOPMENT variable
-DEBUG = os.getenv('DEVELOPMENT') == 'True'
+DEBUG = os.getenv('DEVELOPMENT') == 'False'
 
 # Configure the database using DATABASE_URL
 DATABASES = {
