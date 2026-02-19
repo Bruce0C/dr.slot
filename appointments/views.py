@@ -26,8 +26,9 @@ def register(request):
             return redirect('login')
         else:
             messages.error(
-                request, "There was an error with your registration."
-                " Please try again.")
+                request,
+                "There was an error with your registration. Please try again."
+            )
 
     return render(request, 'appointments/register.html', {'form': form})
 
@@ -44,9 +45,7 @@ def service_view(request):
 
 @login_required
 def booking(request):
-    """View to handle appointment booking.
-    This view is only accessible to logged-in users.
-    """
+    """View to handle appointment booking."""
     services = Service.objects.all()
 
     if request.method == 'POST':
@@ -57,9 +56,11 @@ def booking(request):
         # Validate form inputs
         if not service_id or not date or not time:
             messages.error(request, "Please fill out all fields.")
-            return render(request, 'appointments/booking.html', {
-                'services': services,
-            })
+            return render(
+                request,
+                'appointments/booking.html',
+                {'services': services}
+            )
 
         # Validate date format
         try:
@@ -67,9 +68,11 @@ def booking(request):
         except ValueError:
             messages.error(
                 request, "Invalid date format. Please use YYYY-MM-DD.")
-            return render(request, 'appointments/booking.html', {
-                'services': services,
-            })
+            return render(
+                request,
+                'appointments/booking.html',
+                {'services': services}
+            )
 
         # Save the appointment
         try:
@@ -82,11 +85,14 @@ def booking(request):
             )
             # Add success message
             messages.success(request, "Booking created successfully!")
-            # Redirect to "My Appointments" page
             return redirect('my_appointments')
         except Service.DoesNotExist:
             messages.error(request, "The selected service does not exist.")
-            return render(request, 'appointments/booking.html', {'services': services})
+            return render(
+                request,
+                'appointments/booking.html',
+                {'services': services}
+            )
 
     return render(request, 'appointments/booking.html', {'services': services})
 
@@ -121,7 +127,7 @@ def edit_appointment(request, appointment_id):
                 'services': services,
             })
 
-        # Validate and convert the date format
+        # Validate date format
         try:
             date = datetime.strptime(date, '%Y-%m-%d').date()
         except ValueError:
@@ -165,9 +171,11 @@ def delete_appointment(request, appointment_id):
         messages.success(request, "Appointment deleted successfully!")
         return redirect('my_appointments')
 
-    return render(request, 'appointments/confirm_delete.html', {
-        'appointment': appointment
-    })
+    return render(
+        request,
+        'appointments/confirm_delete.html',
+        {'appointment': appointment}
+    )
 
 
 def user_login(request):
