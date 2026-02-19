@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout
@@ -73,6 +73,22 @@ def my_appointments(request):
         user=request.user).order_by('-date', '-time')
     return render(request, 'appointments/my_appointments.html', {
         'appointments': appointments
+    })
+
+
+@login_required
+def delete_appointment(request, appointment_id):
+    """View to delete an appointment."""
+    appointment = get_object_or_404(
+        Appointment, id=appointment_id, user=request.user)
+
+    if request.method == "POST":
+        appointment.delete()
+        messages.success(request, "Appointment deleted successfully!")
+        return redirect('my_appointments')
+
+    return render(request, 'appointments/confirm_delete.html', {
+        'appointment': appointment
     })
 
 

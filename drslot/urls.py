@@ -35,4 +35,7 @@ urlpatterns = [
         name='my_appointments'
     ),
     path('accounts/', include('allauth.urls')),
+    path('delete_appointment/<int:appointment_id>/',
+         appointments_views.delete_appointment,
+         name='delete_appointment'),
 ]
