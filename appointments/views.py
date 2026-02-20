@@ -20,7 +20,10 @@ def register(request):
 
     if request.method == 'POST':
         if form.is_valid():
-            form.save()
+            user = form.save()
+            # Assign the user to the Patient group by default
+            patient_group = Group.objects.get(name='Patient')
+            user.groups.add(patient_group)
             messages.success(
                 request, "Registration successful! You can now log in.")
             return redirect('login')
