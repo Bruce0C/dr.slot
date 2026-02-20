@@ -83,7 +83,17 @@ main {
     padding: 40px;
 }
 
-/* Footer */
+
+/* Footer styles */
+footer {
+    margin-top: auto; /* Push the footer to the bottom */
+    padding: 10px 0; /* Add some padding for better spacing */
+    border-top: 1px solid #3a3a3a; /* Optional: Add a border to separate footer */
+    box-shadow: 0 -2px 2px #3a3a3a; /* Optional: Add a shadow for better visibility */
+    background-color: #333; /* Dark background for the footer */
+    color: white; /* White text for contrast */
+    text-align: center; /* Center the text */
+}
 footer ul {
     background-color: #405d6c;
     list-style-type: none;
