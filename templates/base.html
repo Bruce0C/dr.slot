@@ -68,9 +68,9 @@
             <div class="row mt-3">
                 <!-- Contact Us Column -->
                 <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
-                    <h5 class="text-uppercase fw-bold mb-4 textGradient" id="contact">
+                    <h2 class="text-uppercase fw-bold mb-4 textGradient" id="contact">
                         Contact Us
-                    </h5>
+                    </h2>
                     <p>
                         <i class="fas fa-phone-alt"></i> Tel: +123-456-7890
                     </p>
@@ -84,9 +84,9 @@
 
                 <!-- Social Media Links Column -->
                 <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
-                    <h5 class="text-uppercase fw-bold mb-4 textGradient">
+                    <h2 class="text-uppercase fw-bold mb-4 textGradient">
                         Follow Us
-                    </h5>
+                    </h2>
                     <a href="https://facebook.com" class="text-white me-4" target="_blank" rel="noopener noreferrer">
                         <i class="fab fa-facebook-f"></i> Facebook
                     </a>
@@ -123,26 +123,6 @@
      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.4/dist/umd/popper.min.js"></script>
      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
- 
-     <!-- Toast -->
-     <script type="text/javascript">
-         $('.toast').toast('show');
-     </script>
-     <div aria-live="polite" aria-atomic="true" class="position-relative">
-     <div class="toast-container position-fixed top-0 end-0 p-3" style="z-index: 1055;">
-        {% if messages %}
-            {% for message in messages %}
-                {% if message.tags == 'success' %}
-                    {% include 'toasts/toast_success.html' %}
-                {% elif message.tags == 'error' %}
-                    {% include 'toasts/toast_error.html' %}
-                {% elif message.tags == 'warning' %}
-                    {% include 'toasts/toast_warning.html' %}
-                {% endif %}
-            {% endfor %}
-        {% endif %}
-     </div>
-    </div>
  
      <!-- Flatpickr Initialization -->
      <script>
