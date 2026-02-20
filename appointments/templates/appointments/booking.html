@@ -29,23 +29,3 @@ Book Appointment
     </form>
 </div>
 {% endblock %}
-
-{% block extra_js %}
-<!-- Include Flatpickr CSS and JS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-
-<script>
-    // Initialize Flatpickr for the date input
-    flatpickr("#date", {
-        minDate: "today", // Disable past dates
-        dateFormat: "Y-m-d", // Format the date as YYYY-MM-DD
-        disable: [
-            function(date) {
-                // Disable weekends (Saturday and Sunday)
-                return (date.getDay() === 0 || date.getDay() === 6);
-            }
-        ]
-    });
-</script>
-{% endblock %}
