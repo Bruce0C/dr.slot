@@ -58,8 +58,9 @@ def service_view(request):
 
 
 @login_required
+@user_passes_test(is_patient)
 def booking(request):
-    """View to handle appointment booking."""
+    """View to handle appointment booking for patients."""
     services = Service.objects.all()
 
     if request.method == 'POST':
