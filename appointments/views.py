@@ -7,6 +7,17 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout
 from .models import Service, Appointment, TIME_CHOICES, SERVICE_CHOICES
+from django.contrib.auth.decorators import user_passes_test
+
+
+def is_patient(user):
+    """Check if the user is in the Patient group."""
+    return user.groups.filter(name='Patient').exists()
+
+
+def is_doctor(user):
+    """Check if the user is in the Doctor group."""
+    return user.groups.filter(name='Doctor').exists()
 
 
 def index(request):
