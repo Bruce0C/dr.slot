@@ -16,48 +16,45 @@
  
  <!-- Include Flatpickr CSS and JS -->
  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-</head>
-<body>
-     <!-- Navigation Bar -->
-     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="{% url 'index' %}">DR.Slot</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        {% if user.is_authenticated %}
-                            {% if is_patient %}
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{% url 'booking' %}">Book Appointment</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{% url 'my_appointments' %}">My Appointments</a>
-                                </li>
-                            {% elif is_doctor %}
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{% url 'all_appointments' %}">All Appointments</a>
-                                </li>
-                            {% endif %}
-                            <li class="nav-item">
-                                <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+ <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{% url 'index' %}">DR.Slot</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    {% if user.is_authenticated %}
+                        {% if is_patient %}
+                            <li class="nav-item {% if request.resolver_match.url_name == 'booking' %}active{% endif %}">
+                                <a class="nav-link" href="{% url 'booking' %}">Book Appointment</a>
                             </li>
-                        {% else %}
-                            <li class="nav-item">
-                                <a class="nav-link" href="{% url 'login' %}">Login</a>
+                            <li class="nav-item {% if request.resolver_match.url_name == 'my_appointments' %}active{% endif %}">
+                                <a class="nav-link" href="{% url 'my_appointments' %}">My Appointments</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{% url 'register' %}">Register</a>
+                        {% elif is_doctor %}
+                            <li class="nav-item {% if request.resolver_match.url_name == 'all_appointments' %}active{% endif %}">
+                                <a class="nav-link" href="{% url 'all_appointments' %}">All Appointments</a>
                             </li>
                         {% endif %}
-                    </ul>
-                </div>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+                        </li>
+                    {% else %}
+                        <li class="nav-item {% if request.resolver_match.url_name == 'login' %}active{% endif %}">
+                            <a class="nav-link" href="{% url 'account_login' %}">Login</a>
+                        </li>
+                        <li class="nav-item {% if request.resolver_match.url_name == 'register' %}active{% endif %}">
+                            <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
+                        </li>
+                    {% endif %}
+                </ul>
             </div>
-        </nav>
+        </div>
+    </nav>
     </header>
-  
+    
     <!-- Main Content -->
     <main class="container mt-4">
         {% block content %}
