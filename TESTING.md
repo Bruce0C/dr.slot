@@ -80,10 +80,14 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 
 | Page | Mobile | Desktop |
 | --- | --- | --- |
-| Register | ![screenshot](documentation/lighthouse/mobile-register.png) | ![screenshot](documentation/lighthouse/desktop-register.png) |
-| Login | ![screenshot](documentation/lighthouse/mobile-login.png) | ![screenshot](documentation/lighthouse/desktop-login.png) |
-| Home | ![screenshot](documentation/lighthouse/mobile-home.png) | ![screenshot](documentation/lighthouse/desktop-home.png) |
-| 404 | ![screenshot](documentation/lighthouse/mobile-404.png) | ![screenshot](documentation/lighthouse/desktop-404.png) |
+| Register | ![screenshot](/media/register_lighthouse_mobile.jpeg) | ![screenshot](/media/register_lighthouse_desktop.png) |
+| Login | ![screenshot](media/login_lighthouse_mobile.jpeg) | ![screenshot](/media/login_lighthouse_desktop.png) |
+| Home | ![screenshot](/media/home__lighthouse_mobile.png) | ![screenshot](/media/home__lighthouse_desktop.png) |
+| Booking Appointment | ![screenshot](/media/book_lighthouse_mobile.png) | ![screenshot](/media/book_appointment_lighthouse_desktop.png) |
+| Edit Appointment | ![screenshot](/media/edit_appointments_lighthouse_mobile.png) | ![screenshot](/media/edit_appointment_lighthouse_desktop.png) |
+| All Appointments | ![screenshot](/media/all_appointments_lighthouse_mobile.png) | ![screenshot](/media/all_appointments_lighthouse_desktop.png) |
+| My Appointments | ![screenshot](/media/my_appointments_lighthouse_mobile.png) | ![screenshot](/media/my_appointments_lighthouse_desktop.png) |
+
 
 ## Defensive Programming
 Defensive programming was manually tested with the below user acceptance testing:
