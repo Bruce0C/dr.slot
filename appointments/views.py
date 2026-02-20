@@ -6,8 +6,9 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout
-from .models import Service, Appointment, TIME_CHOICES, SERVICE_CHOICES
 from django.contrib.auth.decorators import user_passes_test
+from .models import Service, Appointment, TIME_CHOICES, SERVICE_CHOICES
+from .forms import RegistrationForm
 
 
 def is_patient(user):

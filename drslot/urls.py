@@ -24,9 +24,11 @@ from appointments import views as appointments_views
 HANDLER404 = 'appointments.views.error_404_view'
 
 urlpatterns = [
+    # Admin Panel
     path('admin/', admin.site.urls),
-    # Use appointments_views.index
-    path('', appointments_views.index, name='index'),
+
+    # Appointments App Views
+    path('', appointments_views.index, name='index'),  # Homepage
     path(
         'appointments/',
         appointments_views.my_appointments,
@@ -34,20 +36,23 @@ urlpatterns = [
     ),
     path('register/', appointments_views.register, name='register'),
     path('booking/', appointments_views.booking, name='booking'),
-    path(
-        'my_appointments/',
-        appointments_views.my_appointments,
-        name='my_appointments'
-    ),
-    path('accounts/', include('allauth.urls')),
-    path('delete_appointment/<int:appointment_id>/',
-         appointments_views.delete_appointment,
-         name='delete_appointment'),
-    path('edit_appointment/<int:appointment_id>/',
-         appointments_views.edit_appointment, name='edit_appointment'),
-    # Other URL patterns...
-    path('login/', LoginView.as_view(), name='login'),
-    path('logout/', LogoutView.as_view(), name='logout'),
+    path('my_appointments/', appointments_views.my_appointments,
+         name='my_appointments'),
     path('all_appointments/', appointments_views.all_appointments,
          name='all_appointments'),
+    path('delete_appointment/<int:appointment_id>/',
+         appointments_views.delete_appointment, name='delete_appointment'),
+    path('edit_appointment/<int:appointment_id>/',
+         appointments_views.edit_appointment, name='edit_appointment'),
+
+    # Authentication Views
+    path(
+        'login/',
+        LoginView.as_view(template_name='appointments/login.html'),
+        name='login'
+    ),
+    path('logout/', LogoutView.as_view(), name='logout'),
+
+    # Django Allauth URLs
+    path('accounts/', include('allauth.urls')),
 ]
