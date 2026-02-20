@@ -70,12 +70,24 @@ MIDDLEWARE = [
 
 ]
 
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',  # Default auth backend
+    'allauth.account.auth_backends.AuthenticationBackend',  # Allauth backend
+]
+
+
 ROOT_URLCONF = 'drslot.urls'
 WSGI_APPLICATION = 'drslot.wsgi.application'
 
 SITE_ID = 1
+LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
+ACCOUNT_LOGOUT_REDIRECT_URL = '/'
+ACCOUNT_AUTHENTICATION_METHOD = 'username'
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_USERNAME_REQUIRED = True
+ACCOUNT_EMAIL_VERIFICATION = 'optional'
 
 
 TEMPLATES = [
@@ -113,11 +125,6 @@ DATABASES = {
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
-
-AUTHENTICATION_BACKENDS = [
-    'django.contrib.auth.backends.ModelBackend',  # Default auth backend
-    'allauth.account.auth_backends.AuthenticationBackend',  # Allauth backend
-]
 
 AUTH_PASSWORD_VALIDATORS = [
     {

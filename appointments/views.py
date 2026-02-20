@@ -22,7 +22,14 @@ def is_doctor(user):
 
 def index(request):
     """View to render the homepage of the appointment booking system."""
-    return render(request, 'appointments/index.html')
+    is_patient = request.user.groups.filter(
+        name='Patient').exists() if request.user.is_authenticated else False
+    is_doctor = request.user.groups.filter(
+        name='Doctor').exists() if request.user.is_authenticated else False
+    return render(request, 'appointments/index.html', {
+        'is_patient': is_patient,
+        'is_doctor': is_doctor,
+    })
 
 
 def register(request):
@@ -113,9 +120,9 @@ def booking(request):
 
 
 @login_required
-@user_passes_test(is_doctor)
+@user_passes_test(lambda u: u.groups.filter(name='Doctor').exists())
 def all_appointments(request):
-    """View for doctors to see all appointments."""
+    """View to display all appointments (for doctors)."""
     appointments = Appointment.objects.all().order_by('-date', '-time')
     return render(request, 'appointments/all_appointments.html', {
         'appointments': appointments
@@ -127,8 +134,12 @@ def my_appointments(request):
     """View to display the user's appointments."""
     appointments = Appointment.objects.filter(
         user=request.user).order_by('-date', '-time')
+    user_is_patient = request.user.groups.filter(name='Patient').exists()
+    user_is_doctor = request.user.groups.filter(name='Doctor').exists()
     return render(request, 'appointments/my_appointments.html', {
-        'appointments': appointments
+        'appointments': appointments,
+        'is_patient': user_is_patient,
+        'is_doctor': user_is_doctor,
     })
 
 

@@ -16,7 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.contrib.auth.views import LogoutView
+from django.contrib.auth.views import LoginView
 from appointments import views as appointments_views
+
 
 HANDLER404 = 'appointments.views.error_404_view'
 
@@ -42,4 +45,9 @@ urlpatterns = [
          name='delete_appointment'),
     path('edit_appointment/<int:appointment_id>/',
          appointments_views.edit_appointment, name='edit_appointment'),
+    # Other URL patterns...
+    path('login/', LoginView.as_view(), name='login'),
+    path('logout/', LogoutView.as_view(), name='logout'),
+    path('all_appointments/', appointments_views.all_appointments,
+         name='all_appointments'),
 ]

@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}All Appointments{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2>All Appointments</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Patient</th>
+                <th>Service</th>
+                <th>Date</th>
+                <th>Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for appointment in appointments %}
+                <tr>
+                    <td>{{ appointment.user.username }}</td>
+                    <td>{{ appointment.service.name }}</td>
+                    <td>{{ appointment.date }}</td>
+                    <td>{{ appointment.time }}</td>
+                </tr>
+            {% empty %}
+                <tr>
+                    <td colspan="4">No appointments found.</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
