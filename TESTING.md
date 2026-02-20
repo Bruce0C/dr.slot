@@ -17,7 +17,7 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
 | appointments | [booking.html](https://github.com/Bruce0C/dr.slot/blob/main/appointments/templates/appointments/booking.html) | ⚠️ Link (if applicable) | ![screenshot](/media)  | ⚠️ Notes (if applicable) |
 | appointments | [edit_appointment.html](https://github.com/Bruce0C/dr.slot/blob/main/appointments/templates/appointments/edit_appointment.html) | ⚠️ Link (if applicable) | ![screenshot](/media)  | ⚠️ Notes (if applicable) |
 | appointments | [eror_404.html](https://github.com/Bruce0C/dr.slot/blob/main/appointments/templates/appointments/eror_404.html) | ⚠️ Link (if applicable) | ![screenshot](/media)  | ⚠️ Notes (if applicable) |
-| appointments | [index.html](https://github.com/Bruce0C/dr.slot/blob/main/appointments/templates/appointments/index.html) | ⚠️ Link (if applicable) | ![screenshot](/media)  | ⚠️ Notes (if applicable) |
+| appointments | [index.html](https://github.com/Bruce0C/dr.slot/blob/main/appointments/templates/appointments/index.html) | ⚠️ Link (if applicable) | ![screenshot](/media/index_html_validator.png)  | ⚠️ Notes (if applicable) |
 | appointments | [login.html](https://github.com/Bruce0C/dr.slot/blob/main/appointments/templates/appointments/login.html) | ⚠️ Link (if applicable) | ![screenshot](/media/login_html_validator.png)  | ⚠️ Notes (if applicable) |
 | appointments |[logout.html](https://github.com/Bruce0C/dr.slot/blob/main/appointments/templates/appointments/logout.html) | ⚠️ Link (if applicable) |![screenshot](/media) | ⚠️ Notes (if applicable) |
 | appointments | [my_appointments.html](https://github.com/Bruce0C/dr.slot/blob/main/appointments/templates/appointments/my_appointments.html) | ⚠️ Link (if applicable) | ![screenshot](/media)  | ⚠️ Notes (if applicable) |
@@ -26,6 +26,10 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
 ### CSS
 
 I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-validator) to validate all of my CSS files.
+
+| Directory | File | URL | Screenshot | Notes |
+| --- | --- | --- | --- | --- |
+| static | [style.css](https://github.com/Bruce0C/dr.slot/blob/main/static/css/style.css) | ⚠️ Link (if applicable) | ![screenshot](/media/css_validator.png) | ⚠️ Notes (if applicable) |
 
 ### JavaScript
 
@@ -36,23 +40,17 @@ I have used the recommended [JShint Validator](https://jshint.com) to validate a
 
 I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com) to validate all of my Python files.
 
-
 | Directory | File | URL | Screenshot | Notes |
 | --- | --- | --- | --- | --- |
-| appointments | [admin.py](https://github.com/Bruce0C/dr.slot/blob/main/appointments/admin.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Bruce0C/dr.slot/main/appointments/admin.py) | ![screenshot](documentation/validation/py-appointments-admin.png) | ⚠️ Notes (if applicable) |
-| appointments | [models.py](https://github.com/Bruce0C/dr.slot/blob/main/appointments/models.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Bruce0C/dr.slot/main/appointments/models.py) | ![screenshot](documentation/validation/py-appointments-models.png) | ⚠️ Notes (if applicable) |
-| appointments | [tests.py](https://github.com/Bruce0C/dr.slot/blob/main/appointments/tests.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Bruce0C/dr.slot/main/appointments/tests.py) | ![screenshot](documentation/validation/py-appointments-tests.png) | ⚠️ Notes (if applicable) |
-| appointments | [urls.py](https://github.com/Bruce0C/dr.slot/blob/main/appointments/urls.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Bruce0C/dr.slot/main/appointments/urls.py) | ![screenshot](documentation/validation/py-appointments-urls.png) | ⚠️ Notes (if applicable) |
-| appointments | [views.py](https://github.com/Bruce0C/dr.slot/blob/main/appointments/views.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Bruce0C/dr.slot/main/appointments/views.py) | ![screenshot](documentation/validation/py-appointments-views.png) | ⚠️ Notes (if applicable) |
-| drslot | [settings.py](https://github.com/Bruce0C/dr.slot/blob/main/drslot/settings.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Bruce0C/dr.slot/main/drslot/settings.py) | ![screenshot](documentation/validation/py-drslot-settings.png) | ⚠️ Notes (if applicable) |
-| drslot | [urls.py](https://github.com/Bruce0C/dr.slot/blob/main/drslot/urls.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Bruce0C/dr.slot/main/drslot/urls.py) | ![screenshot](documentation/validation/py-drslot-urls.png) | ⚠️ Notes (if applicable) |
-| home | [admin.py](https://github.com/Bruce0C/dr.slot/blob/main/home/admin.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Bruce0C/dr.slot/main/home/admin.py) | ![screenshot](documentation/validation/py-home-admin.png) | ⚠️ Notes (if applicable) |
-| home | [models.py](https://github.com/Bruce0C/dr.slot/blob/main/home/models.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Bruce0C/dr.slot/main/home/models.py) | ![screenshot](documentation/validation/py-home-models.png) | ⚠️ Notes (if applicable) |
-| home | [tests.py](https://github.com/Bruce0C/dr.slot/blob/main/home/tests.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Bruce0C/dr.slot/main/home/tests.py) | ![screenshot](documentation/validation/py-home-tests.png) | ⚠️ Notes (if applicable) |
-| home | [urls.py](https://github.com/Bruce0C/dr.slot/blob/main/home/urls.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Bruce0C/dr.slot/main/home/urls.py) | ![screenshot](documentation/validation/py-home-urls.png) | ⚠️ Notes (if applicable) |
-| home | [views.py](https://github.com/Bruce0C/dr.slot/blob/main/home/views.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Bruce0C/dr.slot/main/home/views.py) | ![screenshot](documentation/validation/py-home-views.png) | ⚠️ Notes (if applicable) |
-|  | [manage.py](https://github.com/Bruce0C/dr.slot/blob/main/manage.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Bruce0C/dr.slot/main/manage.py) | ![screenshot](documentation/validation/py--manage.png) | ⚠️ Notes (if applicable) |
-
+| appointments | [admin.py](https://github.com/Bruce0C/dr.slot/blob/main/appointments/admin.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Bruce0C/dr.slot/main/appointments/admin.py) | ![screenshot](/media/appointments_admin_python_validator.jpeg) | ⚠️ Notes (if applicable) |
+| appointments | [forms.py](https://github.com/Bruce0C/dr.slot/blob/main/appointments/forms.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Bruce0C/dr.slot/main/appointments/forms.py) | ![screenshot](/media/forms_python_validator.jpeg) | ⚠️ Notes (if applicable) |
+| appointments | [models.py](https://github.com/Bruce0C/dr.slot/blob/main/appointments/models.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Bruce0C/dr.slot/main/appointments/models.py) | ![screenshot](/media/models_python_validator.jpeg) | ⚠️ Notes (if applicable) |
+| appointments | [tests.py](https://github.com/Bruce0C/dr.slot/blob/main/appointments/tests.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Bruce0C/dr.slot/main/appointments/tests.py) | ![screenshot](/media/) | ⚠️ Notes (if applicable) |
+| appointments | [urls.py](https://github.com/Bruce0C/dr.slot/blob/main/appointments/urls.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Bruce0C/dr.slot/main/appointments/urls.py) | ![screenshot](/media/appointment_urls_python_validator.jpeg) | ⚠️ Notes (if applicable) |
+| appointments | [views.py](https://github.com/Bruce0C/dr.slot/blob/main/appointments/views.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Bruce0C/dr.slot/main/appointments/views.py) | ![screenshot](/media/views_python_validator.jpeg) | ⚠️ Notes (if applicable) |
+| drslot | [settings.py](https://github.com/Bruce0C/dr.slot/blob/main/drslot/settings.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Bruce0C/dr.slot/main/drslot/settings.py) | ![screenshot](/media/settings_python_validator.jpeg) | ⚠️ Notes (if applicable) |
+| drslot | [urls.py](https://github.com/Bruce0C/dr.slot/blob/main/drslot/urls.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Bruce0C/dr.slot/main/drslot/urls.py) | ![screenshot](/media/urls_python_validator.jpeg) | ⚠️ Notes (if applicable) |
+|  | [manage.py](https://github.com/Bruce0C/dr.slot/blob/main/manage.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Bruce0C/dr.slot/main/manage.py) | ![screenshot](/media/manage_python_validator.jpeg) | ⚠️ Notes (if applicable) |
 ## Responsiveness
 
 I've tested my deployed project to check for responsiveness issues.
@@ -71,8 +69,8 @@ I've tested my deployed project on multiple browsers to check for compatibility 
 | Page | Chrome | Safari | Notes |
 | --- | --- | --- | --- |
 | Register | ![screenshot](documentation/browsers/chrome-register.png) | ![screenshot](documentation/browsers/firefox-register.png) | ![screenshot](documentation/browsers/safari-register.png) | Works as expected |
-| Login | ![screenshot](documentation/browsers/chrome-login.png) | ![screenshot](documentation/browsers/firefox-login.png) | ![screenshot](documentation/browsers/safari-login.png) | Works as expected |
-| Home | ![screenshot](documentation/browsers/chrome-home.png) | ![screenshot](documentation/browsers/firefox-home.png) | ![screenshot](documentation/browsers/safari-home.png) | Works as expected |
+| Login | ![screenshot](/media/log) | ![screenshot](documentation/browsers/firefox-login.png) | ![screenshot](documentation/browsers/safari-login.png) | Works as expected |
+| Home | ![screenshot](/media/home_chrome_desktop.png) | ![screenshot](/media/Home_safari_desktop.png) | ![screenshot](documentation/browsers/safari-home.png) | Works as expected |
 
 ## Lighthouse Audit
 
@@ -100,16 +98,13 @@ Defensive programming was manually tested with the below user acceptance testing
 ## User Story Testing
 | Target | Expectation | Outcome | Screenshot |
 | --- | --- | --- | --- |
-|As a patient| I want to create an account |so that I can log in and manage my appointments.|  ![screenshot](documentation/features/feature01.png) |
-|As a patient| I want to log in to my account| so that I can view my upcoming appointments.|  ![screenshot](documentation/features/feature01.png) |
-|As a user| I want to reset my password if I forget it |so that I can regain access to my account.| ![screenshot](documentation/features/feature01.png) |
-|As a patient| I want to book an appointment with a doctor or healthcare provider |so that I can receive medical care.| ![screenshot](documentation/features/feature01.png) |
-|As a patient| I want to reschedule or cancel my appointment |so that I can manage my schedule effectively.| ![screenshot](documentation/features/feature01.png) |
-|As a patient| I want to receive email notifications for my appointment confirmation and reminders |so that I don’t miss my appointments.| ![screenshot](documentation/features/feature01.png) |
-|As an admin| I want to manage user accounts (patients and doctors) |so that I can ensure the system is used appropriately.| ![screenshot](documentation/features/feature01.png) |
-|As an admin| I want to view all appointments in the system |so that I can monitor the overall schedule.| ![screenshot](documentation/features/feature01.png) |
-|As a user| I want the website to be mobile-friendly |so that I can access it on my phone or tablet.| ![screenshot](documentation/features/feature01.png) |
-|As a user| I want the system to load quickly |so that I can access information without delays. | ![screenshot](documentation/features/feature01.png) |
+|As a patient| I want to create an account |so that I can log in and manage my appointments.|  ![screenshot](/media/register_desktop.png) |
+|As a patient| I want to log in to my account| so that I can view my upcoming appointments.|  ![screenshot](/media/login_desktop.png) |
+|As a patient| I want to book an appointment with a doctor or healthcare provider |so that I can receive medical care.| ![screenshot](/media/booking_desktop.png) |
+|As a patient| I want to reschedule or cancel my appointment |so that I can manage my schedule effectively.| ![screenshot](/media/edit_appointments_desktop.png) |
+|As a doctor/admin | I want to view all appointments in the system |so that I can monitor the overall schedule.| ![screenshot](/media/all_appointments_desktop.png) |
+|As a user| I want the website to be mobile-friendly |so that I can access it on my phone or tablet.| ![screenshot](/media/appointments_mobile.jpeg) |
+|As a user| I want the system to load quickly |so that I can access information without delays. | ![screenshot](/media/home_lighthouse_desktop.png) |
 
 ## Bugs
 ### Fixed Bugs

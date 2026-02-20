@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 
 
 class RegistrationForm(forms.ModelForm):
+    """.. class RegistrationForm"""
     password = forms.CharField(widget=forms.PasswordInput)
     confirm_password = forms.CharField(widget=forms.PasswordInput)
 
@@ -12,7 +13,7 @@ class RegistrationForm(forms.ModelForm):
         specifying the model and fields to use.
         """
         model = User
-        fields = ['username', 'email', 'password']
+        fields = ['username', 'password']
 
     def clean(self):
         cleaned_data = super().clean()
