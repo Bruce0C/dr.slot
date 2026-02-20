@@ -13,19 +13,15 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
 
 | Directory | File | URL | Screenshot | Notes |
 | --- | --- | --- | --- | --- |
-| appointments | [all_appointments.html](https://github.com/Bruce0C/dr.slot/blob/main/appointments/templates/appointments/all_appointments.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/html-appointments-all_appointments.png) | ⚠️ Notes (if applicable) |
-| appointments | [booking.html](https://github.com/Bruce0C/dr.slot/blob/main/appointments/templates/appointments/booking.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/html-appointments-booking.png) | ⚠️ Notes (if applicable) |
-| appointments | [edit_appointment.html](https://github.com/Bruce0C/dr.slot/blob/main/appointments/templates/appointments/edit_appointment.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/html-appointments-edit_appointment.png) | ⚠️ Notes (if applicable) |
-| appointments | [eror_404.html](https://github.com/Bruce0C/dr.slot/blob/main/appointments/templates/appointments/eror_404.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/html-appointments-eror_404.png) | ⚠️ Notes (if applicable) |
-| appointments | [index.html](https://github.com/Bruce0C/dr.slot/blob/main/appointments/templates/appointments/index.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/html-appointments-index.png) | ⚠️ Notes (if applicable) |
-| appointments | [login.html](https://github.com/Bruce0C/dr.slot/blob/main/appointments/templates/appointments/login.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/html-appointments-login.png) | ⚠️ Notes (if applicable) |
-| appointments | [logout.html](https://github.com/Bruce0C/dr.slot/blob/main/appointments/templates/appointments/logout.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/html-appointments-logout.png) | ⚠️ Notes (if applicable) |
-| appointments | [my_appointments.html](https://github.com/Bruce0C/dr.slot/blob/main/appointments/templates/appointments/my_appointments.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/html-appointments-my_appointments.png) | ⚠️ Notes (if applicable) |
-| appointments | [register.html](https://github.com/Bruce0C/dr.slot/blob/main/appointments/templates/appointments/register.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/html-appointments-register.png) | ⚠️ Notes (if applicable) |
-| templates | [toast_error.html](https://github.com/Bruce0C/dr.slot/blob/main/templates/toasts/toast_error.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/html-templates-toast_error.png) | ⚠️ Notes (if applicable) |
-| templates | [toast_info.html](https://github.com/Bruce0C/dr.slot/blob/main/templates/toasts/toast_info.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/html-templates-toast_info.png) | ⚠️ Notes (if applicable) |
-| templates | [toast_success.html](https://github.com/Bruce0C/dr.slot/blob/main/templates/toasts/toast_success.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/html-templates-toast_success.png) | ⚠️ Notes (if applicable) |
-| templates | [toast_warning.html](https://github.com/Bruce0C/dr.slot/blob/main/templates/toasts/toast_warning.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/html-templates-toast_warning.png) | ⚠️ Notes (if applicable) |
+| appointments | [all_appointments.html](https://github.com/Bruce0C/dr.slot/blob/main/appointments/templates/appointments/all_appointments.html) | ⚠️ Link (if applicable) | ![screenshot](/media) | ⚠️ Notes (if applicable) |
+| appointments | [booking.html](https://github.com/Bruce0C/dr.slot/blob/main/appointments/templates/appointments/booking.html) | ⚠️ Link (if applicable) | ![screenshot](/media)  | ⚠️ Notes (if applicable) |
+| appointments | [edit_appointment.html](https://github.com/Bruce0C/dr.slot/blob/main/appointments/templates/appointments/edit_appointment.html) | ⚠️ Link (if applicable) | ![screenshot](/media)  | ⚠️ Notes (if applicable) |
+| appointments | [eror_404.html](https://github.com/Bruce0C/dr.slot/blob/main/appointments/templates/appointments/eror_404.html) | ⚠️ Link (if applicable) | ![screenshot](/media)  | ⚠️ Notes (if applicable) |
+| appointments | [index.html](https://github.com/Bruce0C/dr.slot/blob/main/appointments/templates/appointments/index.html) | ⚠️ Link (if applicable) | ![screenshot](/media)  | ⚠️ Notes (if applicable) |
+| appointments | [login.html](https://github.com/Bruce0C/dr.slot/blob/main/appointments/templates/appointments/login.html) | ⚠️ Link (if applicable) | ![screenshot](/media/login_html_validator.png)  | ⚠️ Notes (if applicable) |
+| appointments |[logout.html](https://github.com/Bruce0C/dr.slot/blob/main/appointments/templates/appointments/logout.html) | ⚠️ Link (if applicable) |![screenshot](/media) | ⚠️ Notes (if applicable) |
+| appointments | [my_appointments.html](https://github.com/Bruce0C/dr.slot/blob/main/appointments/templates/appointments/my_appointments.html) | ⚠️ Link (if applicable) | ![screenshot](/media)  | ⚠️ Notes (if applicable) |
+| appointments | [register.html](https://github.com/Bruce0C/dr.slot/blob/main/appointments/templates/appointments/register.html) | ⚠️ Link (if applicable) | ![screenshot](/media/register_html_validator.png)  | ⚠️ Notes (if applicable) |
 
 ### CSS
 
@@ -133,6 +129,14 @@ Any remaining open issues can be tracked [here](https://www.github.com/Bruce0C/d
 
 | Issue | Screenshot |
 | --- | --- |
+| Appointment booking form does not validate overlapping appointments, allowing double bookings. |  |
+|  The website's responsiveness has minor layout issues on smaller screen sizes.|  |
+|  Toast notifications occasionally overlap when multiple actions are performed quickly.|  |
+|  The "All Appointments" page takes longer to load when there are a large number of appointments.|  |
+|  Error messages are not consistently styled across all pages.|  |
+|  The date picker allows users to select past dates in some browsers.|  |
+|  Second sing in page appears instead of the primary login page.|  |
+|  |  |
 
 
 > [!IMPORTANT]  
