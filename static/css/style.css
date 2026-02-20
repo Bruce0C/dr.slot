@@ -28,17 +28,6 @@ header {
     align-items: baseline;
 }
 
-#menu {
-    font-size: 110%;
-    letter-spacing: 4px;
-    list-style-type: none;
-}
-
-#menu li {
-    margin-bottom: 1em;
-
-}
-
 /* Navbar styles */
 .navbar {
     width: 100%; 
@@ -65,17 +54,18 @@ header {
     display: block;
 }
 
-.navbar-nav .nav-link:hover {
-    color: #ffc107; /* Highlight color on hover */
-    text-decoration: underline;
-}
-
 /* Active link styling */
 .navbar-nav .nav-item.active .nav-link {
     font-weight: bold;
     color: #ffc107; /* Highlight color for active link */
     border-bottom: 2px solid #ffc107; /* Underline for active link */
 }
+.navbar-nav .nav-link:hover {
+    color: #ffc107; /* Highlight color on hover */
+    text-decoration: underline;
+}
+
+
 
 /* Main content styles */
 main {
@@ -94,24 +84,7 @@ footer {
     color: white; /* White text for contrast */
     text-align: center; /* Center the text */
 }
-footer ul {
-    background-color: #405d6c;
-    list-style-type: none;
-}
 
-#social-networks {
-    text-align: center;
-    padding: 20px 0;
-    display: flex;
-    justify-content: space-evenly;
-    list-style-type: none;
-}
-
-#social-networks i {
-    font-size: 160%;
-    padding: 5%;
-    color: #ffffff
-}
 
 /* Media query: tablets and larger (768px and up) */
 @media screen and (min-width: 768px) {
@@ -133,33 +106,9 @@ footer ul {
         padding-right: 1rem;
     }
 
-    #menu {
-        display: flex;
-    }
-
-    #menu li {
-        padding-left: 1rem;
-    }
-
-    .nav-toggle-label {
-        display: none;
-    }
-
-    #logo {
-        margin: 1.5rem;
-        margin-top: 1rem;
-    }
-
     /* Maint content*/
     main {
         /* Push main content down to accomodate larger header */
         margin-top: 79px;
-    }
-}
-
-/* Larger devices (laptops and desktops, 992px and up */
-@media screen and (min-width: 992px) {
-    #menu a:hover {
-        border-bottom: 1px solid #ffffff;
     }
 }
