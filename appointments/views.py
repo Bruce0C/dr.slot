@@ -113,6 +113,16 @@ def booking(request):
 
 
 @login_required
+@user_passes_test(is_doctor)
+def all_appointments(request):
+    """View for doctors to see all appointments."""
+    appointments = Appointment.objects.all().order_by('-date', '-time')
+    return render(request, 'appointments/all_appointments.html', {
+        'appointments': appointments
+    })
+
+
+@login_required
 def my_appointments(request):
     """View to display the user's appointments."""
     appointments = Appointment.objects.filter(
