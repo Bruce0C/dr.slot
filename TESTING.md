@@ -13,18 +13,19 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
 
 | Directory | File | URL | Screenshot | Notes |
 | --- | --- | --- | --- | --- |
+| appointments | [all_appointments.html](https://github.com/Bruce0C/dr.slot/blob/main/appointments/templates/appointments/all_appointments.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/html-appointments-all_appointments.png) | ⚠️ Notes (if applicable) |
 | appointments | [booking.html](https://github.com/Bruce0C/dr.slot/blob/main/appointments/templates/appointments/booking.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/html-appointments-booking.png) | ⚠️ Notes (if applicable) |
 | appointments | [edit_appointment.html](https://github.com/Bruce0C/dr.slot/blob/main/appointments/templates/appointments/edit_appointment.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/html-appointments-edit_appointment.png) | ⚠️ Notes (if applicable) |
 | appointments | [eror_404.html](https://github.com/Bruce0C/dr.slot/blob/main/appointments/templates/appointments/eror_404.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/html-appointments-eror_404.png) | ⚠️ Notes (if applicable) |
 | appointments | [index.html](https://github.com/Bruce0C/dr.slot/blob/main/appointments/templates/appointments/index.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/html-appointments-index.png) | ⚠️ Notes (if applicable) |
+| appointments | [login.html](https://github.com/Bruce0C/dr.slot/blob/main/appointments/templates/appointments/login.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/html-appointments-login.png) | ⚠️ Notes (if applicable) |
+| appointments | [logout.html](https://github.com/Bruce0C/dr.slot/blob/main/appointments/templates/appointments/logout.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/html-appointments-logout.png) | ⚠️ Notes (if applicable) |
 | appointments | [my_appointments.html](https://github.com/Bruce0C/dr.slot/blob/main/appointments/templates/appointments/my_appointments.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/html-appointments-my_appointments.png) | ⚠️ Notes (if applicable) |
 | appointments | [register.html](https://github.com/Bruce0C/dr.slot/blob/main/appointments/templates/appointments/register.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/html-appointments-register.png) | ⚠️ Notes (if applicable) |
 | templates | [toast_error.html](https://github.com/Bruce0C/dr.slot/blob/main/templates/toasts/toast_error.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/html-templates-toast_error.png) | ⚠️ Notes (if applicable) |
 | templates | [toast_info.html](https://github.com/Bruce0C/dr.slot/blob/main/templates/toasts/toast_info.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/html-templates-toast_info.png) | ⚠️ Notes (if applicable) |
 | templates | [toast_success.html](https://github.com/Bruce0C/dr.slot/blob/main/templates/toasts/toast_success.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/html-templates-toast_success.png) | ⚠️ Notes (if applicable) |
 | templates | [toast_warning.html](https://github.com/Bruce0C/dr.slot/blob/main/templates/toasts/toast_warning.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/html-templates-toast_warning.png) | ⚠️ Notes (if applicable) |
-| templates | [login.html](https://github.com/Bruce0C/dr.slot/blob/main/templates/account/login.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/html-templates-login.png) | ⚠️ Notes (if applicable) |
-| templates | [logout.html](https://github.com/Bruce0C/dr.slot/blob/main/templates/account/logout.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/html-templates-logout.png) | ⚠️ Notes (if applicable) |
 
 ### CSS
 
