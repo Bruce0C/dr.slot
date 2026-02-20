@@ -151,10 +151,18 @@ I've used [Canva](https://www.canva.com/) to design my site wireframes.
 
 | Feature | Notes | Screenshot |
 | --- | --- | --- |
-| Register account | Authentication is handled by allauth, allowing users to register accounts. | ![screenshot](documentation/features/register.png) |
-| Login | Authentication is handled by allauth, allowing users to log in to their existing accounts. | ![screenshot](documentation/features/login.png) |
-| Logout | Authentication is handled by allauth, allowing users to log out of their accounts. | ![screenshot](documentation/features/logout.png) |
-| 404 | The 404 error page will indicate when a user has navigated to a page that doesn't exist, replacing the default Heroku 404 page with one that ties into the site's look and feel. | ![screenshot](documentation/features/404.png) |
+| Register account | Authentication is handled by allauth, allowing users to register accounts.
+|![screenshot](/media/register_desktop.png) |
+| Login | Authentication is handled by allauth, allowing users to log in to their existing accounts. | ![screenshot](/media/login_desktop.png) |
+| Logout | Authentication is handled by allauth, allowing users to log out of their accounts. | ![screenshot](/media/patient_nav_bar.png) 
+|Role-Based Access Control| Differentiates access and permissions for patients and doctors.|  ![screenshot](/media/patient_nav_bar.png) ![screenshot](/media/dr_navbar_desktop.png) |
+|Book Appointment| Patients can book appointments by selecting a service, date, and time. |![screenshot](/media/booking_desktop.png) |
+| View My Appointments| Patients can view a list of their booked appointments.|![screenshot](/media/my_appointments_desktop.png)|
+| Edit Appointment | Patients can modify the details of their existing appointments.|![screenshot](/media/edit_appointments_desktop.png)|
+| Delete Appointment | Patients can cancel their appointments by deleting them.|![screenshot](/media/my_appointments_desktop.png)|
+| View All Appointments | Doctors can view all appointments booked by patients.|![screenshot](/media/all_appointments_desktop.png)|
+| Responsive Design ||![screenshot](/media)|
+
 
 ### Future Features
 
@@ -196,31 +204,33 @@ erDiagram
         string username
         string email
         string password
+        string first_name
+        string last_name
         string role
     }
     USER ||--o{ APPOINTMENT : "books"
-    USER ||--o{ AVAILABILITY : "sets"
+    USER ||--o| DOCTOR : "is a"
     DOCTOR {
         int id
         string specialization
         string bio
     }
-    USER ||--o| DOCTOR : "is a"
     APPOINTMENT {
         int id
-        datetime date_time
+        datetime date
+        time time
         string status
         string service
     }
     DOCTOR ||--o{ APPOINTMENT : "has"
     AVAILABILITY {
         int id
-        datetime start_time
-        datetime end_time
+        date date
+        time start_time
+        time end_time
         bool is_available
     }
     DOCTOR ||--o{ AVAILABILITY : "sets"
-```
 source: [Mermaid]()
 
 I have used `pygraphviz` and `django-extensions` to auto-generate an ERD.
